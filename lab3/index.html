@@ -434,80 +434,68 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <img alt="alt text" src="../lab3_images/image-4.png" /></p>
 </li>
 <li>
-<p>Decisionの名前を指定します。<strong>あなたのイニシャル Personal Loan</strong>という名前を指定して、<strong>Create</strong>ボタンをクリックしてください。
+<p>Decisionの名前を指定します。<strong>あなたのイニシャル Personal Loan</strong>という名前を指定して、<strong>Create</strong>ボタンをクリックしてください。<br />
 <img alt="alt text" src="../lab3_images/image-5.png" /></p>
 </li>
 <li>
-<p>次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用される、データを表現します。青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。<br />
+<p>次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用されるデータを表現します。  青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。<br />
 <img alt="alt text" src="../lab3_images/image-6.png" /></p>
 </li>
 </ol>
 <h2 id="input">Input ノードの実装</h2>
-<p>watsonx Orchestrateには、プリビルド・スキルと呼ばれる1000以上の様々なスキルが付属し、すぐに使用することが可能ですが、以下の方法でスキルを追加することも可能です。：</p>
-<ul>
-<li>Open APIの定義ファイル(json/yaml)をインポートする。</li>
-<li>既存スキル(ワークフローやRPA)のディスバリー</li>
-<li>スキルフローの作成</li>
-<li>Automation Builderによるスキルの実装</li>
-</ul>
-<p>このLabでは、OpenAPI定義をインポートしてスキルをカタログに追加する方法について学びます。では、始めましょう！</p>
+<p>Inputノードの定義をしていきます。</p>
 <ol>
 <li>
-<p>まず<a href="https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default/hellowatonx">こちらのリンク</a>をクリックして、Hello world OpenAPIが利用可能であることを確認してください。 {"message":"Missing Authentication Token"}と表示されればOKです。このAPIはAWS上で動作するシンプルなAPIです。</p>
+<p>Inputノードをクリックし、左側に表示される編集欄から、Node nameを<strong>applicant name</strong>に変更してください。<br />
+<img alt="alt text" src="../lab3_images/image-7.png" /></p>
 </li>
 <li>
-<p><a href="../files/helloworld-watsonx.yaml">こちらのリンク</a>を右クリックしてファイルに保存してください。このファイルは先ほどのAPIの定義情報です。</p>
+<p>パレットからAdd Input Nodeをクリックし、新規にInputノードを追加します。<br />
+<img alt="alt text" src="../lab3_images/image-8.png" />  </p>
 </li>
 <li>
-<p>notepad, VSCode, vi/vimといったお好みのエディタでファイルを開き編集します。
-<div class="highlight"><pre><span></span><code>openapi: 3.0.3
-info:
-  title: YourInitials-helloworld-watsonx
-  description: Your Initials Hello world WatsonX
-  version: 1.0.0
-  x-ibm-annotations: true
-  x-ibm-application-name: IBM Watsonx - Training
-  x-ibm-application-id: watsonxai-YourInitials-training
-  x-ibm-skill-type: imported
-  x-ibm-application-icon: &lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; 
-servers:
-  - url: https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default
-security:
-  - passwordGrant: [ ]
-paths:
-  /hellowatsonx:
-    post:
-      summary: YourInitials Hello World WatsonX
-      operationId: Hello-YourInitials-watsonx
-</code></pre></div></p>
+<p>追加されたノードをクリックし、右側の編集欄から、Node nameを<strong>income</strong>に、Output typeを<strong>Integer</strong>にしてください。
+<img alt="alt text" src="../lab3_images/image-9.png" /></p>
 </li>
 <li>
-<p>今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてください。更新後のファイルは以下のようになるはずです。
-<div class="highlight"><pre><span></span><code>openapi: 3.0.3
-info:
-  title: SH-helloworld-watsonx
-  description: SH Hello world WatsonX
-  version: 1.0.0
-  x-ibm-annotations: true
-  x-ibm-application-name: IBM Watsonx - Training
-  x-ibm-application-id: watsonxai-SH-training
-  x-ibm-skill-type: imported
-  x-ibm-application-icon: &lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; 
-servers:
-  - url: https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default
-security:
-  - passwordGrant: [ ]
-paths:
-  /hellowatsonx:
-    post:
-      summary: SH Hello World WatsonX
-      operationId: Hello-SH-watsonx
-</code></pre></div></p>
+<p>incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、<strong>Connect to another node</strong>をクリックし、decision nodeに接続してください。
+<img alt="alt text" src="../lab3_images/image-10.png" />  </p>
 </li>
 <li>
-<p>メニューからSkills and appsを選択します。<br />
-<img alt="alt text" src="../lab1_images/image-8.png" /></p>
+<p>1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  </p>
 </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Node name</th>
+<th>Node type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>income</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>employed</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>SSN</td>
+<td>string</td>
+</tr>
+<tr>
+<td>loan purpose</td>
+<td>string</td>
+</tr>
+<tr>
+<td>credit score</td>
+<td>integer</td>
+</tr>
+</tbody>
+</table>
+<ol>
 <li>
 <p>Add Skillsボタンをクリックします。<br />
 <img alt="alt text" src="../lab1_images/image-9.png" /></p>
