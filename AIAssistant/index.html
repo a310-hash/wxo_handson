@@ -451,42 +451,6 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      ルールの作成
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      意思決定のテスト
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      意思決定サービスのデプロイ
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      スキルのエンハンス
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
       お疲れさまでした！
     </span>
   </a>
@@ -613,276 +577,51 @@
 <img alt="alt text" src="../AIAssistant_images/image-16.png" /></p>
 </li>
 <li>
-<p>右上のアイコンより変更を保存してください。
+<p>右上のアイコンより変更を保存してください。<br />
 <img alt="alt text" src="../AIAssistant_images/image-18.png" /></p>
 </li>
 <li>
-<p>右下のチャットのプレビューに<strong>休暇の申請はどこから行いますか？</strong>と記入して送信してください。Add knowledgeに記入した知識を元に回答が適切に生成されることを確認してください。
+<p>右下のチャットのプレビューに<strong>休暇の申請はどこから行いますか？</strong>と記入して送信してください。Add knowledgeに記入した知識を元に回答が適切に生成されることを確認してください。<br />
 <img alt="alt text" src="../AIAssistant_images/image-17.png" /></p>
 </li>
 <li>
 <p>休暇に関する質問をいくつかして、動作を確認してください。</p>
 </li>
 <li>
-<p>右上の<strong>x</strong>をクリックして、設定画面を閉じてください。
+<p>右上の<strong>x</strong>をクリックして、設定画面を閉じてください。<br />
 <img alt="alt text" src="../AIAssistant_images/image-19.png" /></p>
 </li>
 </ol>
 <h2 id="skill-based-action">Skill based Actionの作成</h2>
-<p>Skill based actionを用いることで、AI-Assistantからスキルを呼び出すことが可能です。アプリケーションの接続が必要なスキルは管理者による登録作業が必要です。今回はAutomation Builderで作成したスキルを呼び出すアクションを定義してみましょう。  </p>
-<ol>
-<li></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Node name</th>
-<th>Node type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>employed</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td>SSN</td>
-<td>string</td>
-</tr>
-<tr>
-<td>loan purpose</td>
-<td>string</td>
-</tr>
-<tr>
-<td>credit score</td>
-<td>integer</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>意思決定ダイアグラムは以下の様になるはずです。<br />
-<img alt="alt text" src="../lab3_images/image-11.png" />  </li>
-</ol>
-<h2 id="_2">ルールの作成</h2>
-<p>次に、意思決定ノードの中で実行されるルールをいくつか作成します。ルールは構文形式と意思決定表の形式で記述することが可能です。(日本語を用いることも可能ですが、現在のバージョンではサポートされていないため英語での記述になります。)</p>
+<p>Skill based actionを用いることで、AI-Assistantからスキルを呼び出すことが可能です。今回はAutomation Builderで作成したスキルを呼び出すアクションを定義してみましょう。なお、アプリケーションの接続が必要なスキルは管理者による登録作業が必要です。  </p>
 <ol>
 <li>
-<p>初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Loanタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。<br />
-<img alt="alt text" src="../lab3_images/image-12.png" /></p>
+<p><strong>create action</strong>をクリックしてください。<br />
+<img alt="alt text" src="../AIAssistant_images/image-20.png" /></p>
 </li>
 <li>
-<p>次のような意思決定エディタが表示されるので、string placeholder(\&lt;a string&gt;と表示されている場所)をクリックしてドロップダウンからstringを選択し、<strong>approved</strong>と入力してください。
-<img alt="alt text" src="../lab3_images/image-15.png" /></p>
+<p>Skill-basedアクションをクリックしてください。<br />
+<img alt="alt text" src="../AIAssistant_images/image-21.png" /></p>
 </li>
 <li>
-<p>ルールは以下の様になっているはずです。  <br />
-<img alt="alt text" src="../lab3_images/image-14.png" /></p>
+<p>スキルの選択画面が表示されるので、Lab3で作成した<strong>XXPersonalLoan</strong>を選択し、右上の<strong>Next</strong>をクリックしてください。<br />
+<img alt="alt text" src="../AIAssistant_images/image-23.png" /></p>
 </li>
 <li>
-<p>次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を<strong>decline low credit score</strong>として、criteria chocesでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
-<img alt="alt text" src="../lab3_images/image-17.png" /></p>
+<p>Phraseとして<strong>ローンの審査</strong>と入力し右上の<strong>create and review</strong>をクリックしてください。なお、スキルを呼び出すためのフレーズは複数指定することで認識の精度が高まります。
+<img alt="alt text" src="../AIAssistant_images/image-24.png" /></p>
 </li>
 <li>
-<p>ルールのテンプレートを以下の様に修正します。<br />
-<img alt="alt text" src="../lab3_images/image-18.png" /></p>
+<p>右下のチャット・プレビューに<strong>ローンの審査</strong>と記入し、送信してください。スキルが呼び出され入力フォームが表示されます。なお、watsonx Orchestrateでは設定でフォーム入力にするか、チャットで1つづつ入力パラメータを確認するかの設定が可能です。<br />
+<img alt="alt text" src="../AIAssistant_images/image-25.png" /></p>
 </li>
 <li>
-<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)<br />
-<img alt="alt text" src="../lab3_images/image-19.png" /></p>
+<p><strong>Close</strong>をクリックしてください。<br />
+<img alt="alt text" src="../AIAssistant_images/image-26.png" /></p>
 </li>
 </ol>
-<h2 id="_3">意思決定のテスト</h2>
-<p>作成した意思決定はテスト・データを指定してテストすることができます。</p>
-<ol>
-<li>
-<p>右上の<strong>Preview</strong>アイコンをクリックしてください。<br />
-<img alt="alt text" src="../lab3_images/image-21.png" /></p>
-</li>
-<li>
-<p><strong>Add test data set</strong>をクリックしてテスト・データを追加します。<br />
-<img alt="alt text" src="../lab3_images/image-22.png" /></p>
-</li>
-<li>
-<p>左側に各項目の入力画面が表示されるので、＋をクリックして入力してから<strong>pewview</strong>ボタンをクリックして意思決定の出力を確認してください。例えば、creditScoreに500を入力して実行した場合、却下されるはずです。<br />
-<img alt="alt text" src="../lab3_images/image-23.png" /></p>
-</li>
-</ol>
-<h2 id="_4">意思決定サービスのデプロイ</h2>
-<p>正しく動作することが確認できたら、スキルとして呼び出せるようにサービスをデプロイします。  </p>
-<ol>
-<li>
-<p>Back to "XX Personal Loan"をクリックしてください。<br />
-<img alt="alt text" src="../lab3_images/image-24.png" /></p>
-</li>
-<li>
-<p><strong>Operations</strong>タブをクリックしてください。スキルとして呼び出されるオペレーションを定義します。<br />
-<img alt="alt text" src="../lab3_images/image-25.png" /></p>
-</li>
-<li>
-<p><strong>Create operation</strong>ボタンをクリックしてください。<br />
-<img alt="alt text" src="../lab3_images/image-26.png" /></p>
-</li>
-<li>
-<p>オペレーションの設定画面が表示されるので、Operation nameを<strong>XX Personal Loan</strong>、source modelとして XX Personal Loanを選択してから<strong>save</strong>をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。<br />
-<img alt="alt text" src="../lab3_images/image-27.png" /></p>
-</li>
-<li>
-<p>次にページ右上にある<strong>Share changes</strong>タブをクリックします。<br />
-<img alt="alt text" src="../lab3_images/image-28.png" /></p>
-</li>
-<li>
-<p><strong>Share</strong>ボタンをクリックしてください。ダイアログが表示されるので<strong>Share</strong>をクリックします。この操作により、リポジトリに変更が反映されます。<br />
-<img alt="alt text" src="../lab3_images/image-29.png" /></p>
-</li>
-<li>
-<p>左上の←をクリックしてLending Serviceのレベルに戻り、<strong>History</strong>タブをクリックしてください。<br />
-<img alt="alt text" src="../lab3_images/image-30.png" /></p>
-</li>
-<li>
-<p>右側の+アイコンをクリックし、バージョンを作成します。<br />
-<img alt="alt text" src="../lab3_images/image-31.png" /></p>
-</li>
-<li>
-<p>バージョンの名前としてnameの欄に<strong>1.0.0</strong>と入力し、<strong>Create</strong>をクリックしてください。   　　
-<img alt="alt text" src="../lab3_images/image-32.png" /></p>
-</li>
-<li>
-<p>バージョンが作成されたら、<strong>Publish</strong>タブをクリックし、作成されたバージョンを展開し、<strong>Publish</strong>をクリックしてください。ダイアログが表示されるので<strong>Publish</strong>をクリックします。<br />
-<img alt="alt text" src="../lab3_images/image-33.png" /></p>
-</li>
-<li>
-<p>意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから<strong>Skills and apps</strong>を選択してから、<strong>Skills</strong>タブをクリックし、スキルの一覧を表示させます。<br />
-<img alt="alt text" src="../lab3_images/image-34.png" /></p>
-</li>
-<li>
-<p>作成した意思決定のスキルがReady to Publishの状態で表示されているはずです。
-<img alt="alt text" src="../lab3_images/image-35.png" /></p>
-</li>
-</ol>
-<h2 id="_5">スキルのエンハンス</h2>
-<p>スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です、また、スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 </p>
-<table>
-<thead>
-<tr>
-<th>入力パラメータ</th>
-<th>振る舞い</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>income</td>
-<td>必須</td>
-</tr>
-<tr>
-<td>loan purpose</td>
-<td>選択肢</td>
-</tr>
-<tr>
-<td>credit score</td>
-<td>説明を追加</td>
-</tr>
-<tr>
-<td>SSN</td>
-<td>非表示</td>
-</tr>
-<tr>
-<td>employed</td>
-<td>default value:true</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>
-<p>スキルの右側のメニューを展開し、<strong>Enhance this skill</strong>を選択します。<br />
-<img alt="alt text" src="../lab3_images/image-36.png" /></p>
-</li>
-<li>
-<p><strong>Input</strong>タブをクリックし、incomeの<strong>Required</strong>にチェックを入れてください。<br />
-<img alt="alt text" src="../lab3_images/image-37.png" /></p>
-</li>
-<li>
-<p>loanPurposeの<strong>Options</strong>を選択し、<strong>medical emergency</strong>,<strong>consolidate debt</strong>,<strong>home improvement</strong>の3つのOptionを設定してください。<br />
-<img alt="alt text" src="../lab3_images/image-39.png" /></p>
-</li>
-<li>
-<p>creditScoreを選択し説明に<strong>Provide the Experian credit score</strong>を入力してください。<br />
-<img alt="alt text" src="../lab3_images/image-40.png" /></p>
-</li>
-<li>
-<p><strong>Save as draft</strong>をクリックして変更を保存します。<br />
-<img alt="alt text" src="../lab3_images/image-41.png" /></p>
-</li>
-<li>
-<p>スキル一覧画面に戻り、<strong>Export this skill</strong>を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。<br />
-<img alt="alt text" src="../lab3_images/image-42.png" /></p>
-</li>
-<li>
-<p>メモ帳やエディタなどで保存したファイルを開きます。各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については<a href="https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties">Understanding x-properties</a>を参照してください。</p>
-</li>
-<li>
-<p><strong>epmployed</strong>は以下の様に設定されています。<strong>,"default": "true"</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください）</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code>    &quot;employed&quot;: {
-                &quot;type&quot;: &quot;boolean&quot;,
-                &quot;x-ibm-order&quot;: 3,
-                &quot;x-ibm-multiline&quot;: &quot;false&quot;,
-                &quot;default&quot;: &quot;true&quot;
-                },
-</code></pre></div>
-<ol>
-<li>
-<p>同様にSSNの部分を修正し、以下の様に <strong>,"x-ibm-show": "false"</strong>を追加してください。
-<div class="highlight"><pre><span></span><code>    &quot;SSN&quot;: {
-            &quot;type&quot;: &quot;string&quot;,
-            &quot;x-ibm-order&quot;: 4,
-            &quot;x-ibm-multiline&quot;: &quot;false&quot;,
-            &quot;x-ibm-show&quot;: &quot;false&quot;
-            },
-</code></pre></div></p>
-</li>
-<li>
-<p>ファイルを保存します。</p>
-</li>
-<li>
-<p>Skills and appsの画面で<strong>Add skills</strong>をクリックします。<br />
-<img alt="alt text" src="../lab3_images/image-43.png" /></p>
-</li>
-<li>
-<p><strong>From a file</strong>をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。<br />
-<img alt="alt text" src="../lab3_images/image-44.png" /></p>
-</li>
-<li>
-<p>ファイルの検証が正しく行われたことを確認し<strong>Next</strong>をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。<br />
-<img alt="alt text" src="../lab3_images/image-45.png" /></p>
-</li>
-<li>
-<p>既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、<strong>Add</strong>をクリックしてスキルを上書きします。<br />
-<img alt="alt text" src="../lab3_images/image-46.png" /></p>
-</li>
-<li>
-<p>スキルの右側のメニューから<strong>Enhance this skill</strong>をクリックしてからスキルを<strong>Publish</strong>してください。<br />
-<img alt="alt text" src="../lab3_images/image-47.png" /></p>
-</li>
-<li>
-<p>左側のメニューから<strong>Skill catalog</strong>を選択します。<br />
-<img alt="alt text" src="../lab3_images/image-48.png" /></p>
-</li>
-<li>
-<p><strong>あなたのイニシャル_Lending_Service</strong>検索欄に記入して検索し選択し、<strong>Add</strong>をクリックしてスキルを追加します。
-<img alt="alt text" src="../lab3_images/image-49.png" /><br />
-<img alt="alt text" src="../lab3_images/image-50.png" /></p>
-</li>
-<li>
-<p>左側のメニューからChatを表示し、チャットの入力欄に、<strong>あなたのイニシャルPersonalLoan</strong>と入力してみてください。 スキルのフォームが表示され、先ほど行ったカスタマイズが正しく行われていることを確認します。 
-<img alt="alt text" src="../lab3_images/image-52.png" /></p>
-</li>
-<li>
-<p>値を入力し、正しい結果が返ってくることを確認してください。</p>
-</li>
-</ol>
-<h2 id="_6">お疲れさまでした！</h2>
-<p>このハンズオンでは、Automation Builderを用いて意思決定サービスを実装し、スキルの入力フォームをカスタマイズしてから、チャット画面から呼び出しました。意思決定サービスを用いることで、AIが苦手な根拠のある正確な判断を実行することができます。　</p>
+<h2 id="_2">お疲れさまでした！</h2>
+<p>AI-Assistant Builderを用いてAIアシスタントを実装しました。AI Assistant Builderを用いることで、AI Assistantを迅速に実装することが可能です。また、作成したAI AssitantはWebサイトに埋め込んだり、Slackなどと連携することも可能です。　</p>
 
 
 
