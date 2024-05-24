@@ -58,10 +58,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -114,7 +116,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -343,18 +371,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#personal-skill" class="md-nav__link">
-    <span class="md-ellipsis">
-      Personal Skillへのスキルの追加
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      スキルの動作確認
+      ルールの作成
     </span>
   </a>
   
@@ -362,6 +381,33 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      意思決定のテスト
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      意思決定サービスのデプロイ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      スキルのエンハンス
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       お疲れさまでした！
     </span>
@@ -458,7 +504,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <img alt="alt text" src="../lab3_images/image-9.png" /></p>
 </li>
 <li>
-<p>incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、<strong>Connect to another node</strong>をクリックし、decision nodeに接続してください。
+<p>incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、<strong>Connect to another node</strong>をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)<br />
 <img alt="alt text" src="../lab3_images/image-10.png" />  </p>
 </li>
 <li>
@@ -473,10 +519,6 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>income</td>
-<td>integer</td>
-</tr>
 <tr>
 <td>employed</td>
 <td>boolean</td>
@@ -496,132 +538,229 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 </tbody>
 </table>
 <ol>
-<li>
-<p>Add Skillsボタンをクリックします。<br />
-<img alt="alt text" src="../lab1_images/image-9.png" /></p>
-</li>
-<li>
-<p>From a fileを選択してください。<br />
-<img alt="alt text" src="../lab1_images/image-11.png" /></p>
-</li>
-<li>
-<p>先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。</p>
-</li>
-<li>
-<p>ファイルの検証が実施され、問題無ければ以下の様に表示されます。<br />
-<img alt="alt text" src="../lab1_images/image-12.png" /></p>
-</li>
-<li>
-<p>右下のNextをクリックしてください。追加するAPIの内容が表示されます。</p>
-</li>
-<li>
-<p>Hello World WatsonXのチェックボックスをチェックし、右下のAddボタンをクリックしてください。<br />
-<img alt="alt text" src="../lab1_images/image-13.png" /></p>
-</li>
-<li>
-<p>スキル一覧にインポートしたスキルが表示されるので、右側のメニューを展開し、<strong>Enhance this skill</strong>を選択してください。<br />
-<img alt="alt text" src="../lab1_images/image-14.png" /></p>
-</li>
-<li>
-<p>スキルの詳細が表示されます。スキルのEnhance画面から、スキルの入出力の表示、スキルを呼び出すためのフレーズ、watsonx Orchestrateが次に実行するスキルの提案を行うNext Best Skillsの設定などを行うことが可能です。<br />
-<img alt="alt text" src="../lab1_images/image-15.png" /></p>
-</li>
-<li>
-<p><strong>Input</strong>タブをクリックしてください。Inputタブでは、スキルの入力について確認することができます。スキルの入力パラメータに<strong>name</strong>があり、必須のパラメータで無いことが分かります。<br />
-<img alt="alt text" src="../lab1_images/image-16.png" /></p>
-</li>
-<li>
-<p><strong>Output</strong>タブをクリックしてください。Outputタブでは、スキルの出力について確認することが可能です。スキルの出力パラメータとして<strong>greeting</strong>が定義されていることが分かります。<br />
-<img alt="alt text" src="../lab1_images/image-18.png" /></p>
-</li>
-<li>
-<p><strong>Security</strong>タブをクリックしてください。Securityタブでは、認証情報や、URLを確認することができます。また、接続のテストを行うことができます。<br />
-<img alt="alt text" src="../lab1_images/image-19.png" /></p>
-</li>
-<li>
-<p>接続のテストを実行してみましょう。Usernameに test@acme.com、Passwordにtestを入力します。今回使用するAPIについては認証不要のため、どんな値を入力しても問題ありません。</p>
-</li>
-<li>
-<p>Submitボタンをクリックし、Authentication Successfulと表示されることを確認します。<br />
-<img alt="alt text" src="../lab1_images/image-20.png" /></p>
-</li>
-<li>
-<p><strong>Phrases</strong>タブをクリックしてください。Phrasesタブでは、スキルを呼び出す際に使用するフレーズを登録します。ユーザーがここに登録した例文にマッチした文章をチャットから入力することでこのスキルが呼び出されます。複数のスキルがマッチした場合にはwatsonx Orchestrateは実行するスキルを確認してきます。いくつかの例文を追加してみてください。<br />
-<img alt="alt text" src="../lab1_images/image-21.png" /></p>
-</li>
-<li>
-<p><strong>Next best skills</strong>タブをクリックしてください。このタブでは、スキルを実行した後に次に実行すべきスキルの選択肢として表示される複数のスキルを定義することが可能です。</p>
-</li>
-<li>Next best skillsは10個まで登録することが可能です。</li>
-<li>
-<p>Next best skillsに追加した各スキルに対して明示的に変数のマッピングを行うことが可能です。<br />
-<img alt="alt text" src="../lab1_images/image-23.png" /></p>
-</li>
-<li>
-<p><strong>Publish</strong>ボタンをクリックして、スキルをPublishしてください。<br />
-<img alt="alt text" src="../lab1_images/image-24.png" /></p>
-</li>
+<li>意思決定ダイアグラムは以下の様になるはずです。<br />
+<img alt="alt text" src="../lab3_images/image-11.png" />  </li>
 </ol>
-<h2 id="personal-skill">Personal Skillへのスキルの追加</h2>
-<p>ここまでの作業で、カタログにスキルを追加することができました。次のステップとしてPersonal Skillにカタログからスキルを追加します。</p>
+<h2 id="_2">ルールの作成</h2>
+<p>次に、意思決定ノードの中で実行されるルールをいくつか作成します。ルールは構文形式と意思決定表の形式で記述することが可能です。(日本語を用いることも可能ですが、現在のバージョンではサポートされていないため英語での記述になります。)</p>
 <ol>
 <li>
-<p>左上のメニューから<strong>Chat</strong>を選択してチャット画面を表示します。<br />
-<img alt="alt text" src="../lab1_images/image-25.png" /></p>
+<p>初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Loanタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。<br />
+<img alt="alt text" src="../lab3_images/image-12.png" /></p>
 </li>
 <li>
-<p>以下のような画面が表示されるはずです。<br />
-<img alt="alt text" src="../lab1_images/image-26.png" /></p>
+<p>次のような意思決定エディタが表示されるので、string placeholder(\&lt;a string&gt;と表示されている場所)をクリックしてドロップダウンからstringを選択し、<strong>approved</strong>と入力してください。
+<img alt="alt text" src="../lab3_images/image-15.png" /></p>
 </li>
 <li>
-<p>左下のAdd skills from the catalogをクリックします。検索フォームに先ほど作成したスキルの名前を入力してください。<br />
-<img alt="alt text" src="../lab1_images/image-27.png" /></p>
+<p>ルールは以下の様になっているはずです。  <br />
+<img alt="alt text" src="../lab3_images/image-14.png" /></p>
 </li>
 <li>
-<p>スキルを選択して、add skillをクリックしてスキルを追加します。<br />
-<img alt="alt text" src="../lab1_images/image-29.png" /></p>
+<p>次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を<strong>decline low credit score</strong>として、criteria chocesでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
+<img alt="alt text" src="../lab3_images/image-17.png" /></p>
 </li>
 <li>
-<p>右上の<strong>Connect App</strong>をクリックしてアプリケーションと接続します。username,passwordに任意の値を入力し、Connect appボタンをクリックします。<br />
-<img alt="alt text" src="../lab1_images/image-31.png" /></p>
+<p>ルールのテンプレートを以下の様に修正します。<br />
+<img alt="alt text" src="../lab3_images/image-18.png" /></p>
 </li>
 <li>
-<p>アプリケーションとの接続が完了しました！</p>
-</li>
-<li>
-<p>なお、接続はカタログからではなく、チャットからスキルを呼び出した際に実行することも可能です。<br />
-<img alt="alt text" src="../lab1_images/image-32.png" /></p>
-</li>
-<li>
-<p>メニューからチャット画面に戻ります。スキルが追加されていることが分かります。<br />
-<img alt="alt text" src="../lab1_images/image-33.png" /></p>
+<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。（デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。) <br />
+<img alt="alt text" src="../lab3_images/image-19.png" /></p>
 </li>
 </ol>
-<h2 id="_2">スキルの動作確認</h2>
-<p>カタログから追加したスキルは以下の2つの方法で実行可能です:
-- チャット画面下部に表示されているスキルをクリックする
-- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateがしたいされたフレーズを元に学習するため、完全一致する必要はありません)を入力する</p>
+<h2 id="_3">意思決定のテスト</h2>
+<p>作成した意思決定はテスト・データを指定してテストすることができます。</p>
 <ol>
 <li>
-<p>チャットの入力欄に、<strong>Hello World WatsonX</strong>と入力してみてください。<br />
-<img alt="alt text" src="../lab1_images/image-34.png" /></p>
+<p>右上の<strong>Preview</strong>アイコンをクリックしてください。<br />
+<img alt="alt text" src="../lab3_images/image-21.png" /></p>
 </li>
 <li>
-<p>先ほど追加したスキルが呼び出され、入力フォームが表示されます。<br />
-<img alt="alt text" src="../lab1_images/image-35.png" /></p>
+<p><strong>Add test data set</strong>をクリックしてテスト・データを追加します。<br />
+<img alt="alt text" src="../lab3_images/image-22.png" /></p>
 </li>
 <li>
-<p>自分の名前を入力し、<strong>Apply</strong>ボタンをクリックしてください。結果が表示されるはずです。<br />
-<img alt="alt text" src="../lab1_images/image-36.png" /></p>
-</li>
-<li>
-<p>チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。<br />
-<img alt="alt text" src="../lab1_images/image-37.png" /><br />
-<img alt="alt text" src="../lab1_images/image-38.png" /></p>
+<p>左側に各項目の入力画面が表示されるので、＋をクリックして入力してから<strong>pewview</strong>ボタンをクリックして意思決定の出力を確認してください。例えば、creditScoreに500を入力して実行した場合、却下されるはずです。<br />
+<img alt="alt text" src="../lab3_images/image-23.png" /></p>
 </li>
 </ol>
-<h2 id="_3">お疲れさまでした！</h2>
-<p>このハンズオンでは、watsonx Orchestrateにログインし、カスタムスキルを追加、EnhanceしてからPublishし、カタログに追加しました。そしてカタログからスキルを追加し、チャット画面から呼び出しました。　</p>
+<h2 id="_4">意思決定サービスのデプロイ</h2>
+<p>正しく動作することが確認できたら、スキルとして呼び出せるようにサービスをデプロイします。  </p>
+<ol>
+<li>
+<p>Back to "XX Personal Loan"をクリックしてください。<br />
+<img alt="alt text" src="../lab3_images/image-24.png" /></p>
+</li>
+<li>
+<p><strong>Operations</strong>タブをクリックしてください。スキルとして呼び出されるオペレーションを定義します。<br />
+<img alt="alt text" src="../lab3_images/image-25.png" /></p>
+</li>
+<li>
+<p><strong>Create operation</strong>ボタンをクリックしてください。<br />
+<img alt="alt text" src="../lab3_images/image-26.png" /></p>
+</li>
+<li>
+<p>オペレーションの設定画面が表示されるので、Operation nameを<strong>XX Personal Loan</strong>、source modelとして XX Personal Loanを選択してから<strong>save</strong>をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。<br />
+<img alt="alt text" src="../lab3_images/image-27.png" /></p>
+</li>
+<li>
+<p>次にページ右上にある<strong>Share changes</strong>タブをクリックします。<br />
+<img alt="alt text" src="../lab3_images/image-28.png" /></p>
+</li>
+<li>
+<p><strong>Share</strong>ボタンをクリックしてください。ダイアログが表示されるので<strong>Share</strong>をクリックします。この操作により、リポジトリに変更が反映されます。<br />
+<img alt="alt text" src="../lab3_images/image-29.png" /></p>
+</li>
+<li>
+<p>左上の←をクリックしてLending Serviceのレベルに戻り、<strong>History</strong>タブをクリックしてください。<br />
+<img alt="alt text" src="../lab3_images/image-30.png" /></p>
+</li>
+<li>
+<p>右側の+アイコンをクリックし、バージョンを作成します。<br />
+<img alt="alt text" src="../lab3_images/image-31.png" /></p>
+</li>
+<li>
+<p>バージョンの名前としてnameの欄に<strong>1.0.0</strong>と入力し、<strong>Create</strong>をクリックしてください。   　　
+<img alt="alt text" src="../lab3_images/image-32.png" /></p>
+</li>
+<li>
+<p>バージョンが作成されたら、<strong>Publish</strong>タブをクリックし、作成されたバージョンを展開し、<strong>Publish</strong>をクリックしてください。ダイアログが表示されるので<strong>Publish</strong>をクリックします。<br />
+<img alt="alt text" src="../lab3_images/image-33.png" /></p>
+</li>
+<li>
+<p>意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから<strong>Skills and apps</strong>を選択してから、<strong>Skills</strong>タブをクリックし、スキルの一覧を表示させます。<br />
+<img alt="alt text" src="../lab3_images/image-34.png" /></p>
+</li>
+<li>
+<p>作成した意思決定のスキルがReady to Publishの状態で表示されているはずです。
+<img alt="alt text" src="../lab3_images/image-35.png" /></p>
+</li>
+</ol>
+<h2 id="_5">スキルのエンハンス</h2>
+<p>スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です、また、スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 </p>
+<table>
+<thead>
+<tr>
+<th>入力パラメータ</th>
+<th>振る舞い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>income</td>
+<td>必須</td>
+</tr>
+<tr>
+<td>loan purpose</td>
+<td>選択肢</td>
+</tr>
+<tr>
+<td>credit score</td>
+<td>説明を追加</td>
+</tr>
+<tr>
+<td>SSN</td>
+<td>非表示</td>
+</tr>
+<tr>
+<td>employed</td>
+<td>default value:true</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>スキルの右側のメニューを展開し、<strong>Enhance this skill</strong>を選択します。<br />
+<img alt="alt text" src="../lab3_images/image-36.png" /></p>
+</li>
+<li>
+<p><strong>Input</strong>タブをクリックし、incomeの<strong>Required</strong>にチェックを入れてください。<br />
+<img alt="alt text" src="../lab3_images/image-37.png" /></p>
+</li>
+<li>
+<p>loanPurposeの<strong>Options</strong>を選択し、<strong>medical emergency</strong>,<strong>consolidate debt</strong>,<strong>home improvement</strong>の3つのOptionを設定してください。<br />
+<img alt="alt text" src="../lab3_images/image-39.png" /></p>
+</li>
+<li>
+<p>creditScoreを選択し説明に<strong>Provide the Experian credit score</strong>を入力してください。<br />
+<img alt="alt text" src="../lab3_images/image-40.png" /></p>
+</li>
+<li>
+<p><strong>Save as draft</strong>をクリックして変更を保存します。<br />
+<img alt="alt text" src="../lab3_images/image-41.png" /></p>
+</li>
+<li>
+<p>スキル一覧画面に戻り、<strong>Export this skill</strong>を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。<br />
+<img alt="alt text" src="../lab3_images/image-42.png" /></p>
+</li>
+<li>
+<p>メモ帳やエディタなどで保存したファイルを開きます。各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については<a href="https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties">Understanding x-properties</a>を参照してください。</p>
+</li>
+<li>
+<p><strong>epmployed</strong>は以下の様に設定されています。<strong>,"default": "true"</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください）</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>    &quot;employed&quot;: {
+                &quot;type&quot;: &quot;boolean&quot;,
+                &quot;x-ibm-order&quot;: 3,
+                &quot;x-ibm-multiline&quot;: &quot;false&quot;,
+                &quot;default&quot;: &quot;true&quot;
+                },
+</code></pre></div>
+<ol>
+<li>
+<p>同様にSSNの部分を修正し、以下の様に <strong>,"x-ibm-show": "false"</strong>を追加してください。
+<div class="highlight"><pre><span></span><code>    &quot;SSN&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-ibm-order&quot;: 4,
+            &quot;x-ibm-multiline&quot;: &quot;false&quot;,
+            &quot;x-ibm-show&quot;: &quot;false&quot;
+            },
+</code></pre></div></p>
+</li>
+<li>
+<p>ファイルを保存します。</p>
+</li>
+<li>
+<p>Skills and appsの画面で<strong>Add skills</strong>をクリックします。<br />
+<img alt="alt text" src="../lab3_images/image-43.png" /></p>
+</li>
+<li>
+<p><strong>From a file</strong>をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。<br />
+<img alt="alt text" src="../lab3_images/image-44.png" /></p>
+</li>
+<li>
+<p>ファイルの検証が正しく行われたことを確認し<strong>Next</strong>をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。<br />
+<img alt="alt text" src="../lab3_images/image-45.png" /></p>
+</li>
+<li>
+<p>既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、<strong>Add</strong>をクリックしてスキルを上書きします。<br />
+<img alt="alt text" src="../lab3_images/image-46.png" /></p>
+</li>
+<li>
+<p>スキルの右側のメニューから<strong>Enhance this skill</strong>をクリックしてからスキルを<strong>Publish</strong>してください。<br />
+<img alt="alt text" src="../lab3_images/image-47.png" /></p>
+</li>
+<li>
+<p>左側のメニューから<strong>Skill catalog</strong>を選択します。<br />
+<img alt="alt text" src="../lab3_images/image-48.png" /></p>
+</li>
+<li>
+<p><strong>あなたのイニシャル_Lending_Service</strong>検索欄に記入して検索し選択し、<strong>Add</strong>をクリックしてスキルを追加します。
+<img alt="alt text" src="../lab3_images/image-49.png" /><br />
+<img alt="alt text" src="../lab3_images/image-50.png" /></p>
+</li>
+<li>
+<p>左側のメニューからChatを表示し、チャットの入力欄に、<strong>あなたのイニシャルPersonalLoan</strong>と入力してみてください。 スキルのフォームが表示され、先ほど行ったカスタマイズが正しく行われていることを確認します。 
+<img alt="alt text" src="../lab3_images/image-52.png" /></p>
+</li>
+<li>
+<p>値を入力し、正しい結果が返ってくることを確認してください。</p>
+</li>
+</ol>
+<h2 id="_6">お疲れさまでした！</h2>
+<p>このハンズオンでは、Automation Builderを用いて意思決定サービスを実装し、スキルの入力フォームをカスタマイズしてから、チャット画面から呼び出しました。意思決定サービスを用いることで、AIが苦手な根拠のある正確な判断を実行することができます。　</p>
 
 
 
