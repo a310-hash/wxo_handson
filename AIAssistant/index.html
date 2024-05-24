@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../lab2/">
+        <link rel="prev" href="../GenAI/">
       
-      
-        <link rel="next" href="../OpenAPI/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Technical Lab3 - WXOHandson</title>
+        <title>AI Assistant - WXOHandson</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#technical-lab3" class="md-skip">
+        <a href="#aiassistant" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Technical Lab3
+              AI Assistant
             
           </span>
         </div>
@@ -288,6 +286,66 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical Lab3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenAPI Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GenAI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GenAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -304,7 +362,7 @@
           
   
   <span class="md-ellipsis">
-    Technical Lab3
+    AI Assistant
   </span>
   
 
@@ -315,7 +373,7 @@
         
   
   <span class="md-ellipsis">
-    Technical Lab3
+    AI Assistant
   </span>
   
 
@@ -355,9 +413,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#automation" class="md-nav__link">
+  <a href="#ai-assistant" class="md-nav__link">
     <span class="md-ellipsis">
-      Automationの作成
+      AI Assistantの作成
     </span>
   </a>
   
@@ -425,66 +483,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../OpenAPI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    OpenAPI Builder
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../GenAI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GenAI
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../AIAssistant/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AI Assistant
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -500,26 +498,24 @@
                   
 
 
-<h1 id="technical-lab3">Technical Lab3</h1>
-<p>このLabでは、特定の基準に依存したアクションを実行する方法について学びます。<br />
-例えば、ローン申請者の収入やクレジット・スコアに応じてローンを承認したい場合にはルール・ベースでの意思決定を行うことが有用です。<br />
-watsonx Orchestrateはルール・エンジン機能を提供するため、意思決定を実装してスキルとして呼び出すことによりこの判断を行うことが可能です。</p>
+<h1 id="aiassistant">AIAssistant</h1>
+<p>このLabでは、AI Assistant Builderを用いて、AI Assistantを構築します。生成AIを用いて回答するアクションや、これまでのハンズオンで作成したスキルを呼び出すアクションを定義し、動作を確認します。</p>
 <h2 id="_1">前提条件</h2>
 <ol>
 <li>watsonx Orchestrateの環境にアクセスできること。<br />
 <a href="https://dl.watson-orchestrate.ibm.com/">https://dl.watson-orchestrate.ibm.com/</a> 　　 </li>
 <li>IBM-idを用いてログイン可能であること。</li>
-<li>Automationsを用いて自動化を作成する権限があること。(Builder権限)</li>
+<li>AI Assistant Builderを用いて自動化を作成する権限があること。(Builder権限)</li>
 </ol>
 <h2 id="watsonx-orchestrate">watsonx Orchestrateへのアクセス</h2>
+<p>このセクションでは、watsonx Orchestrateの主な画面構成について学びます。</p>
 <ol>
 <li>watsonx Orchestrateにログインします。</li>
 <li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
 <li>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。<br />
 <img alt="alt text" src="../lab1_images/image.png" /></li>
 </ol>
-<h2 id="automation">Automationの作成</h2>
-<p>このセクションでは、Automationを作成します。</p>
+<h2 id="ai-assistant">AI Assistantの作成</h2>
 <ol>
 <li>
 <p>Automationsをクリックします。もしくは、左上のメニューから<strong>Automations</strong>を選択してもOKです。<br />
@@ -551,7 +547,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 </li>
 </ol>
 <h2 id="input">Input ノードの実装</h2>
-<p>このセクションでは、Inputノードの定義をしていきます。</p>
+<p>Inputノードの定義をしていきます。</p>
 <ol>
 <li>
 <p>Inputノードをクリックし、左側に表示される編集欄から、Node nameを<strong>applicant name</strong>に変更してください。<br />
@@ -627,7 +623,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <img alt="alt text" src="../lab3_images/image-18.png" /></p>
 </li>
 <li>
-<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。（デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。) <br />
+<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)<br />
 <img alt="alt text" src="../lab3_images/image-19.png" /></p>
 </li>
 </ol>
