@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aiassistant" class="md-skip">
+        <a href="#aiassistant-builder" class="md-skip">
           Skip to content
         </a>
       
@@ -422,6 +422,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMによる基本動作の確認
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       Input ノードの実装
@@ -498,7 +507,7 @@
                   
 
 
-<h1 id="aiassistant">AIAssistant</h1>
+<h1 id="aiassistant-builder">AIAssistant Builder</h1>
 <p>このLabでは、AI Assistant Builderを用いて、AI Assistantを構築します。生成AIを用いて回答するアクションや、これまでのハンズオンで作成したスキルを呼び出すアクションを定義し、動作を確認します。</p>
 <h2 id="_1">前提条件</h2>
 <ol>
@@ -508,7 +517,6 @@
 <li>AI Assistant Builderを用いて自動化を作成する権限があること。(Builder権限)</li>
 </ol>
 <h2 id="watsonx-orchestrate">watsonx Orchestrateへのアクセス</h2>
-<p>このセクションでは、watsonx Orchestrateの主な画面構成について学びます。</p>
 <ol>
 <li>watsonx Orchestrateにログインします。</li>
 <li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
@@ -518,32 +526,44 @@
 <h2 id="ai-assistant">AI Assistantの作成</h2>
 <ol>
 <li>
-<p>Automationsをクリックします。もしくは、左上のメニューから<strong>Automations</strong>を選択してもOKです。<br />
-<img alt="alt text" src="../lab3_images/image.png" /></p>
+<p><strong>AI Assistant Builder</strong>をクリックします。もしくは、左上のメニューから<strong>AI Assistant Builder</strong>を選択してもOKです。<br />
+<img alt="alt text" src="../AIAssistant_images/image.png" /></p>
 </li>
 <li>
-<p>右上の<strong>Create automations</strong>をクリックします。
-<img alt="alt text" src="../lab3_images/image-1.png" /></p>
+<p>画面上部右にAssistantのリストがあります。そこを展開し、<strong>Create New ＋</strong>をクリックします。<br />
+<img alt="alt text" src="../AIAssistant_images/image-1.png" /></p>
 </li>
 <li>
-<p>Automationの作成ダイアログが表示されるので、<strong>あなたのイニシャル_Lending_Services</strong>という名前を入力し、<strong>Create</strong>をクリックしてください。
-<img alt="alt text" src="../lab3_images/image-2.png" /></p>
+<p>Assistantの作成ダイアログが表示されるので、<strong>あなたのイニシャル-Assistant</strong>という名前を入力し、<strong>Create assistant</strong>をクリックしてください。Assistant Languageとして日本語を選択することも可能ですが、現時点で一部の機能が使用できないため<strong>English</strong>のままにしてください。<br />
+<img alt="alt text" src="../AIAssistant_images/image-2.png" /></p>
 </li>
 <li>
-<p>以下のようなダイアログが表示されます。意思決定、ワークフロー、生成AIに関する処理を実装することが可能です。今回は意思決定に関するスキルを実装するため、<strong>Decision</strong>をクリックします。  <br />
-<img alt="alt text" src="../lab3_images/image-3.png" /></p>
+<p>Assistantが作成されます。画面下部に全体のアーキテクチャが表示されています。このハンズオンでは、<strong>General purpose</strong>、<strong>AI-guided</strong>、<strong>Skill-based</strong>の3つの動作を確認します。    <br />
+<img alt="alt text" src="../AIAssistant_images/image-3.png" /></p>
+</li>
+</ol>
+<h2 id="llm">LLMによる基本動作の確認</h2>
+<p>AI AssistantではLLMを用いて回答を生成することが可能です。また、LLMによる回答を望まない場合には、LLMによる一般的な回答を行わないように設定することが可能です。Elastic Searchとの統合を構成することで、検索結果をもとに生成AIで回答を生成するいわゆるRAG(Retrieval Augumented Generation)のパターンを構成することも可能ですが、今回のハンズオンでは行いません。</p>
+<ol>
+<li>
+<p>左側のリストより、<strong>Generative AI</strong> を選択してください。<br />
+<img alt="alt text" src="../AIAssistant_images/image-4.png" /></p>
 </li>
 <li>
-<p>次にDecisionのモデルを選択します。3つのモデルを選択可能ですが、今回はDecision Modelを作成します。Decision ModelはDMN(Decision Model Notation)と呼ばれる標準の形式で意思決定をモデル化することが可能です。<br />
-<img alt="alt text" src="../lab3_images/image-4.png" /></p>
+<p>以下のような画面が表示されます。この画面からは生成AIに関する設定を行うことが可能です。上部選択リストを展開し、利用可能なLLMを確認してください。今回はデフォルトで設定されている、graniteをそのまま使用します。  <br />
+<img alt="alt text" src="../AIAssistant_images/image-5.png" /></p>
 </li>
 <li>
-<p>Decisionの名前を指定します。<strong>あなたのイニシャル Personal Loan</strong>という名前を指定して、<strong>Create</strong>ボタンをクリックしてください。<br />
-<img alt="alt text" src="../lab3_images/image-5.png" /></p>
+<p>右下に表示されているプレビューの入力欄に<strong>What is IBM?</strong>と入力して送信してください。LLMによって一般的な質問に対しての回答が生成されます。　　<br />
+<img alt="alt text" src="../AIAssistant_images/image-6.png" /></p>
 </li>
 <li>
-<p>次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用されるデータを表現します。  青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。<br />
-<img alt="alt text" src="../lab3_images/image-6.png" /></p>
+<p>LLMが一般的な回答を行うかどうかは、Answer behaviorのGeneral purpose answeringで設定することが可能です。右側にあるトグルスイッチをクリックし、OFFにしてください。
+<img alt="alt text" src="../AIAssistant_images/image-8.png" /></p>
+</li>
+<li>
+<p>再びプレビューの入力欄に<strong>What is IBM?</strong>と入力してください。先ほどとは回答が異なることを確認します。<br />
+<img alt="alt text" src="../AIAssistant_images/image-9.png" /></p>
 </li>
 </ol>
 <h2 id="input">Input ノードの実装</h2>
