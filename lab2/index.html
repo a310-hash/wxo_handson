@@ -467,18 +467,18 @@
 <p>このLabでは、watsonxを用いたコンテンツ生成のカスタムスキルと、Outlookでメールを送信するプリビルドスキルを組み合わせて、スキルフローを作成します。</p>
 <h2 id="_1">前提条件</h2>
 <ol>
-<li>watsonx Orchestrateの環境にアクセスできること。</li>
-<li>IBM-idを用いてログイン可能であること。</li>
+<li>watsonx Orchestrate の環境にアクセスできること。</li>
+<li>IBM-id を用いてログイン可能であること。</li>
 <li>スキルの作成、追加を行う権限があること。</li>
 <li>Outlook のメールアドレスとパスワード (講師から配布されます)</li>
 </ol>
 <h2 id="_2">コンテンツ生成のスキルをインポートしよう</h2>
 <p>このセクションでは、watsonx Orchestrate の主な画面構成について学びます。</p>
 <ol>
-<li>watsonx Orchestrateにログインします。</li>
-<li>スキルを定義したOpenAPIのファイルをダウンロードします。リンクを<strong>右クリック</strong>して<strong>名前を付けてリンクを保存</strong>を選択すると、ご自身のPCに保存できます。または、ブラウザ上でjsonファイルを開いても構いません。</li>
-<li>お好みのエディター (VSCode、vi/vimなど) を用いてファイルを編集します。</li>
-<li><code>YourName-BAM content generation</code> (7行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、<code>TaroYamada-BAM content generation</code>)。同様に、<code>YourName-generate content</code> (39行目) も変更します。</li>
+<li>watsonx Orchestrate にログインします。</li>
+<li>スキルを定義した <a href="../files/BAM_generate_content.json">OpenAPI ファイル</a>をダウンロードします。リンクを<strong>右クリック</strong>して<strong>名前を付けてリンクを保存</strong>を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。</li>
+<li>お好みのエディター (VSCode、vi/vim など) を用いてファイルを編集します。</li>
+<li><code>YourName-generate content skill for wxO Handson</code> (8行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、<code>TaroYamada-generate content</code>)。同様に、<code>YourName-generate content</code> (26行目) も変更します。</li>
 <li>ファイルを保存します。</li>
 <li>
 <p>watsonx Orchestrateの画面で<strong>Skills and apps</strong>→<strong>Add skills</strong>を選択します。
@@ -489,11 +489,11 @@
  <a class="glightbox" href="../lab2_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-2.png" /></a></p>
 </li>
 <li>
-<p>先ほど編集した<code>wxOハンズオン - BAM Content Generation.json</code>という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。<strong>Next</strong>をクリックします。
+<p>先ほど編集した<code>wxOハンズオン - BAM generate content.json</code>という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。<strong>Next</strong>をクリックします。☆
  <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_16221_dl.watson-orchestrate.ibm.com-1.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_16221_dl.watson-orchestrate.ibm.com-1.jpeg" /></a></p>
 </li>
 <li>
-<p>インポートするスキルのチェックボックスにチェックを入れ、<strong>Add</strong>をクリックします。
+<p>インポートするスキルのチェックボックスにチェックを入れ、<strong>Add</strong>をクリックします。☆
  <a class="glightbox" href="../lab2_images/image-60.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-60.png" /></a></p>
 </li>
 <li>
@@ -505,12 +505,12 @@
  <a class="glightbox" href="../lab2_images/image-61.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-61.png" /></a></p>
 </li>
 <li>
-<p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています。 (先ほどjsonファイルで変更した部分です)
+<p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています。 (先ほど、jsonファイルで変更した部分です)
  <a class="glightbox" href="../lab2_images/image-62.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-62.png" /></a></p>
 </li>
 <li>
 <p><strong>Input</strong>タブをクリックします。required (必須) の欄とそうでない欄があることが確認できます。この画面は、インポートしたスキルを実行する際の入力項目を表しています。<br />
- 必須になっている項目の <strong>Edit response</strong> をクリックし、テキストを入力してみましょう。例：<code>create an email for new hires</code>（スキルの実行時に例文として表示されます。）<br />
+ 必須になっている項目の <strong>Edit response</strong> をクリックし、テキストを入力してみましょう。例：<code>create welcome email to new hires</code>（スキルの実行時に例文として表示されます。）<br />
 <a class="glightbox" href="../lab2_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-8.png" /></a></p>
 </li>
 <li>
@@ -518,7 +518,7 @@
 <ul>
 <li><strong>Output</strong>タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。</li>
 <li><strong>Security</strong>タブは、スキルを実行するために必要な認証情報を設定できます。</li>
-<li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとしてwatsonx Orchestrate が提案するスキルを設定できます。</li>
+<li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。</li>
 </ul>
 </li>
 <li>
@@ -555,7 +555,7 @@
 <a class="glightbox" href="../lab2_images/image-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-13.png" /></a></p>
 </li>
 <li>
-<p>検索バーで、<code>content generation</code>を検索します。 先ほど作成したスキルをクリックします。<strong>YourName-BAM content generation</strong> 
+<p>検索バーで、<code>generate content</code>を検索します。 <strong>YourName-generate content skill for wxO Handson</strong> という名前のアプリケーションを開き、先ほど作成した<strong>YourName-generate content</strong> というスキルを開きます。
  <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172215_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172215_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
@@ -567,7 +567,7 @@
 <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172546_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172546_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>コピーした<strong>API キー</strong>を追加し、<strong>Connect app</strong> ボタンをクリックします。 指定された<strong>API キー</strong>が有効な場合は、画面に正常な通知が表示されます。
+<p>コピーした<strong>API キー</strong>を貼り付け、APIキーの冒頭に <strong>Bearer_</strong> を追加します。<strong>Connect app</strong> ボタンをクリックします。 指定された<strong>API キー</strong>が有効な場合は、画面に正常な通知が表示されます。
  <a class="glightbox" href="../lab2_images/image-66.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-66.png" /></a></p>
 </li>
 <li>
@@ -586,7 +586,7 @@
 <p>スキルをテストするには、該当のスキルをクリックします。 </p>
 </li>
 <li>
-<p>前のステップで説明したように、input は必須フィールドになっているため入力する必要があります。 </p>
+<p>前のステップで説明したように、input は必須項目になっているため入力する必要があります。 </p>
 </li>
 <li>
 <p>input の欄に、<code>create welcome email to new hires</code>と入力します。<strong>Show all fields</strong> は、その他のパラメータを確認し、設定することができます。<br />
@@ -685,7 +685,7 @@ Outlook に接続してメールを送信できるようにするには資格情
  <a class="glightbox" href="../lab2_images/image-34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-34.png" /></a></p>
 </li>
 <li>
-<p>スキルを追加するには、<strong>+</strong> をクリックします。<strong>Generate content</strong> を検索して、ご自身の <strong>BAM content generation</strong> を選択します。☆
+<p>スキルを追加するには、<strong>+</strong> をクリックします。<strong>Generate content</strong> を検索して、ご自身の <strong>BAM generate content</strong> を選択します。☆
  <a class="glightbox" href="../lab2_images/image-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-35.png" /></a></p>
 </li>
 <li>
