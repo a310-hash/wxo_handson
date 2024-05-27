@@ -326,54 +326,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      STEP1:コンテンツ生成のスキルをインポートしよう
+      コンテンツ生成のスキルをインポートしよう
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Step2:新入社員向けの歓迎メールを生成して、スキルをテストしてみよう
+      新入社員向けの歓迎メールを生成して、スキルをテストしてみよう
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step3outlook" class="md-nav__link">
+  <a href="#outlook" class="md-nav__link">
     <span class="md-ellipsis">
-      Step3:カタログからスキルを追加し、Outlookでメールを送ろう
+      カタログからスキルを追加し、Outlookでメールを送ろう
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step4" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Step4:自身のメールアドレスへメールを送り、スキルをテストしてみよう
+      自身のメールアドレスへメールを送り、スキルをテストしてみよう
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step52" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      Step5:2つのスキルを組み合わせてスキルフローを作成しよう
+      2つのスキルを組み合わせてスキルフローを作成しよう
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Step6:メールを生成し、自身のメールアドレスに送信して、スキルをテストしてみよう
+      メールを生成し、自身のメールアドレスに送信して、スキルをテストしてみよう
     </span>
   </a>
   
@@ -489,16 +489,15 @@
 <li>watsonx Orchestrateの環境にアクセスできること。</li>
 <li>IBM-idを用いてログイン可能であること。</li>
 <li>スキルの作成、追加を行う権限があること。</li>
-<li>watsonx のAPIキー (講師から配布されます)</li>
-<li>Outlook のemail IDと資格情報 (講師から配布されます)</li>
+<li>Outlook のメールアドレスとパスワード (講師から配布されます)</li>
 </ol>
-<h2 id="step1">STEP1:コンテンツ生成のスキルをインポートしよう</h2>
-<p>このセクションでは、watsonx Orchestrateの主な画面構成について学びます。</p>
+<h2 id="_2">コンテンツ生成のスキルをインポートしよう</h2>
+<p>このセクションでは、watsonx Orchestrate の主な画面構成について学びます。</p>
 <ol>
 <li>watsonx Orchestrateにログインします。</li>
-<li>watsonx-skill-fileをダウンロードします。リンクを<strong>右クリック</strong>して<strong>名前を付けてリンクを保存</strong>を選択すると、ご自身のPCに保存できます。または、ブラウザ上でjsonファイルを開いても構いません。</li>
+<li>スキルを定義したOpenAPIのファイルをダウンロードします。リンクを<strong>右クリック</strong>して<strong>名前を付けてリンクを保存</strong>を選択すると、ご自身のPCに保存できます。または、ブラウザ上でjsonファイルを開いても構いません。</li>
 <li>お好みのエディター (VSCode、vi/vimなど) を用いてファイルを編集します。</li>
-<li><code>YourName - watsonx skill for WxO</code> (4行目) を探し、YourName をご自身のイニシャルに変更します (例:山田太郎さんなら、<code>TY - watsonx sill for WxO</code>)。同様に、<code>Generate Content (YourName)</code> (22行目) も変更します。</li>
+<li><code>YourName-BAM content generation</code> (7行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、<code>TaroYamada-BAM content generation</code>)。同様に、<code>YourName-generate content</code> (39行目) も変更します。</li>
 <li>ファイルを保存します。</li>
 <li>
 <p>watsonx Orchestrateの画面で<strong>Skills and apps</strong>→<strong>Add skills</strong>を選択します。
@@ -509,58 +508,61 @@
  <img alt="alt text" src="../lab2_images/image-2.png" /></p>
 </li>
 <li>
-<p>先ほど編集した<code>basic_watsonx1.json</code>という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。<strong>Next</strong>をクリックします。
- <img alt="alt text" src="../lab2_images/image-3.png" /></p>
+<p>先ほど編集した<code>wxOハンズオン - BAM Content Generation.json</code>という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。<strong>Next</strong>をクリックします。
+ <img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_16221_dl.watson-orchestrate.ibm.com-1.jpeg" /></p>
 </li>
 <li>
 <p>インポートするスキルのチェックボックスにチェックを入れ、<strong>Add</strong>をクリックします。
- <img alt="alt text" src="../lab2_images/image-4.png" /></p>
+ <img alt="alt text" src="../lab2_images/image-60.png" /></p>
 </li>
 <li>
-<p>スキルのインポートに成功すると、以下のように表示されます。
- <img alt="alt text" src="../lab2_images/image-5.png" /></p>
+<p>スキルのインポートに成功すると、以下のように表示されます。<br />
+<img alt="alt text" src="../lab2_images/image-5.png" /></p>
 </li>
 <li>
-<p>Skills and appsのページで、作成したスキルを検索します (例:Generate content (TY) )。スキルを公開するために、右端の ⁝ から<strong>Enhance this skill</strong>を選択します。
- <img alt="alt text" src="../lab2_images/image-6.png" /></p>
+<p>Skills and appsのページで、作成したスキルを検索します (例:TaroYamada-generate content)。スキルを公開するために、右端の ⁝ から<strong>Enhance this skill</strong>を選択します。
+ <img alt="alt text" src="../lab2_images/image-61.png" /></p>
 </li>
 <li>
-<p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています (先ほどjsonファイルで変更した部分です)。
- <img alt="alt text" src="../lab2_images/image-7.png" /></p>
+<p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています。 (先ほどjsonファイルで変更した部分です)
+ <img alt="alt text" src="../lab2_images/image-62.png" /></p>
 </li>
 <li>
-<p><strong>Input</strong>タブをクリックします。required (必須) になっている欄となっていない欄があることが確認できます。
- <img alt="alt text" src="../lab2_images/image-8.png" /></p>
+<p><strong>Input</strong>タブをクリックします。required (必須) の欄とそうでない欄があることが確認できます。この画面は、インポートしたスキルを実行する際の入力項目を表しています。<br />
+ 必須になっている項目の <strong>Edit response</strong> をクリックし、テキストを入力してみましょう。例：<code>create an email for new hires</code>（スキルの実行時に例文として表示されます。）<br />
+<img alt="alt text" src="../lab2_images/image-8.png" /></p>
 </li>
 <li>
 <p>他のタブも同様に動作を確認できます。</p>
-</li>
-<li><strong>Output</strong>タブは、スキルの出力を設定できます。スキルの実行結果をテキストや表の形式で出力することができます。。</li>
+<ul>
+<li><strong>Output</strong>タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。</li>
 <li><strong>Security</strong>タブは、スキルを実行するために必要な認証情報を設定できます。</li>
-<li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとしてwatsonx Orchestrate が提案するスキルを設定します。</li>
+<li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとしてwatsonx Orchestrate が提案するスキルを設定できます。</li>
+</ul>
+</li>
 <li>
 <p><strong>Phrases</strong>タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。
-<img alt="alt text" src="../lab2_images/image-9.png" /></p>
+<img alt="alt text" src="../lab2_images/image-63.png" /></p>
 </li>
 <li>
-<p>フレーズのテキスト欄に、<code>generate content</code>を入力し<strong>Enter(return)</strong> を押します。
- <strong>Note:</strong> フレーズを入力するには<strong>Enter(return)</strong> を押さなければなりません。
- <code>content</code>,<code>test</code>などのフレーズを追加することも可能です。
- そして、<strong>Publish</strong>を押します。
- <img alt="alt text" src="../lab2_images/image-10.png" /></p>
+<p>フレーズのテキスト欄に、<code>generate content</code>を入力し<strong>Enter(return)</strong> を押します。<br />
+<strong>注釈:</strong> フレーズを入力するには<strong>Enter(return)</strong> を押さなければなりません。<br />
+<code>generate</code>,<code>content</code>などが含まれるフレーズを自由に追加することも可能です。
+ 最後に、<strong>Publish</strong>を押します。
+ <img alt="alt text" src="../lab2_images/image-64.png" /></p>
 </li>
 <li>
-<p>スキルが公開（publish）できたというメッセージが表示されます。
- <img alt="alt text" src="../lab2_images/image-11.png" /></p>
+<p>スキルが公開（publish）できたというメッセージが表示されます。<br />
+<img alt="alt text" src="../lab2_images/image-65.png" /></p>
 </li>
 <li>
 <p>スキルが正常に公開されました。</p>
 </li>
 <li>
-<p><strong>補足:</strong> 先ほど公開したスキルをカタログから探して、ステータスを確認してみましょう。ステータスはどのようになっているでしょうか？ <strong><em>_</em></strong>______</p>
+<p><strong>オプション:</strong> 先ほど公開したスキルをカタログから探して、ステータスを確認してみましょう。ステータスはどのようになっているでしょうか？</p>
 </li>
 </ol>
-<h2 id="step2">Step2:新入社員向けの歓迎メールを生成して、スキルをテストしてみよう</h2>
+<h2 id="_3">新入社員向けの歓迎メールを生成して、スキルをテストしてみよう</h2>
 <p>このセクションでは、インポートしたスキルをテストする方法について説明します。 スキルをテストするには、カタログからスキルを追加して実行する必要があります。 このための手順は、以下のとおりです。</p>
 <ol>
 <li>
@@ -568,56 +570,60 @@
  <img alt="alt text" src="../lab2_images/image-12.png" /></p>
 </li>
 <li>
-<p><strong>Add skills from the catalog</strong>を選択し、前のステップで作成したスキルを選択します。
- <img alt="alt text" src="../lab2_images/image-13.png" /></p>
+<p><strong>Add skills from the catalog</strong> を選択し、前のステップで作成したスキルを選択します。<br />
+<img alt="alt text" src="../lab2_images/image-13.png" /></p>
 </li>
 <li>
-<p>検索バーで、<code>generate content</code>を検索します。 先ほど作成したスキルをクリックします。<strong>(名前)- WxO Bootcamp- watsonx skill for WxO</strong>
- <img alt="alt text" src="../lab2_images/image-14.png" /></p>
+<p>検索バーで、<code>content generation</code>を検索します。 先ほど作成したスキルをクリックします。<strong>YourName-BAM content generation</strong> 
+ <img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172215_dl.watson-orchestrate.ibm.com.jpeg" /></p>
 </li>
 <li>
-<p>スキルを追加する前に、このスキルを接続するための API キーを指定し、スキルを使用するときに必要な出力を設定する必要があります。 この<strong>API キー</strong>は、セッション中に講師から提供されます。</p>
+<p>スキルを追加する前に、このスキルを接続するための API キーを指定し、スキルを使用するときに必要な出力を設定する必要があります。 この<strong>API キー</strong>は、<a href="https://bam.res.ibm.com/">IBM Research BAM</a> にアクセスして、APIキーをコピーします。
+ <img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_161036_bam.res.ibm.com.jpeg" /></p>
 </li>
 <li>
-<p><strong>Connect app</strong>ボタンをクリックします。
- <img alt="alt text" src="../lab2_images/image-15.png" /></p>
+<p>スキルカタログの画面に戻り、<strong>Connect app</strong> ボタンをクリックします。<br />
+<img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172546_dl.watson-orchestrate.ibm.com.jpeg" /></p>
 </li>
 <li>
-<p>提供された<strong>API キー</strong>を追加し、<strong>Connect app</strong>ボタンをクリックします。 指定された<strong>API キー</strong>が有効な場合は、画面に正常な通知が表示されます。
- <img alt="alt text" src="../lab2_images/image-16.png" /></p>
+<p>コピーした<strong>API キー</strong>を追加し、<strong>Connect app</strong> ボタンをクリックします。 指定された<strong>API キー</strong>が有効な場合は、画面に正常な通知が表示されます。
+ <img alt="alt text" src="../lab2_images/image-66.png" /></p>
 </li>
 <li>
-<p>次に<strong>Add skill</strong>をクリックします。
- <img alt="alt text" src="../lab2_images/image-17.png" /></p>
+<p>次に<strong>Add skill</strong> をクリックします。
+ <img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172959_dl.watson-orchestrate.ibm.com.jpeg" /></p>
 </li>
 <li>
 <p>スキルが追加された (<code>Added</code>) というメッセージが表示されます。
- <img alt="alt text" src="../lab2_images/image-18.png" /></p>
+ <img alt="alt text" src="../lab2_images/image-67.png" /></p>
 </li>
 <li>
-<p><strong>Chat</strong>画面に戻ります。これで、スキルが表示されます。
- <img alt="alt text" src="../lab2_images/image-19.png" /></p>
+<p><strong>Chat</strong> 画面に戻ります。これで、スキルが表示されます。<br />
+<img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_174444_dl.watson-orchestrate.ibm.com.jpeg" /></p>
 </li>
 <li>
-<p>スキルをテストするには、スキルをクリックします。 </p>
+<p>スキルをテストするには、該当のスキルをクリックします。 </p>
 </li>
 <li>
 <p>前のステップで説明したように、input は必須フィールドになっているため入力する必要があります。 </p>
 </li>
 <li>
-<p><code>create welcome email to new hires</code>という語句を入力します。
-　<img alt="alt text" src="../lab2_images/image-20.png" /></p>
+<p>input の欄に、<code>create welcome email to new hires</code>と入力します。<strong>Show all fields</strong> は、その他のパラメータを確認し、設定することができます。<br />
+ 入力が完了したら、<strong>Apply</strong> をクリックします。<br />
+<img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_182333_dl.watson-orchestrate.ibm.com.jpeg" /></p>
 </li>
 <li>
-<p>スキル実行の一環として、進行状況が視覚的に表示され、「..」というメッセージが表示されます。 最後に、新入社員を歓迎する E メールのコンテンツを生成します。
+<p>スキルが実行されると、進行状況が表示され、<code>working on it</code> というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。★
  <img alt="alt text" src="../lab2_images/image-21.png" /></p>
 </li>
 <li>
-<p>歓迎メールのコンテンツ生成をテストが完了しました。</p>
+<p>以上で、メールのコンテンツを生成するテストは完了です。</p>
 </li>
 </ol>
-<h2 id="step3outlook">Step3:カタログからスキルを追加し、Outlookでメールを送ろう</h2>
-<p>Outlook でメールを送信するスキルは既にインポートされています。 このスキルを追加し、Microsoft Outlook に接続してテストする必要があります。 Outlook に接続してメールで送信できるようにするには資格情報が必要になります。 差出人として自身のメールアドレスと資格情報を使用することはできません。</p>
+<h2 id="outlook">カタログからスキルを追加し、Outlookでメールを送ろう</h2>
+<p>Outlook でメールを送信するスキルは、プリビルドスキルとして既に watsonx Orchestrate にインポートされています。<br />
+このスキルを追加し、Microsoft Outlook に接続してテストする必要があります。<br />
+Outlook に接続してメールを送信できるようにするには資格情報が必要になります。差出人として、自身のメールアドレスと資格情報を使用することはできません。</p>
 <ol>
 <li>
 <p><strong>Chat</strong> に移動し <strong>Add skills from the catalog</strong> をクリックするか、左上のメニューに移動して <strong>Skills catalog</strong> を選択します。
@@ -628,38 +634,38 @@
  <img alt="alt text" src="../lab2_images/image-23.png" /></p>
 </li>
 <li>
-<p><strong>Microsoft Outlook</strong>をクリックし、<strong>Send an email using Outlook</strong> の中で<strong>Add skill</strong>を選択します。 これで、このスキルは<strong>Added</strong>として表示されます。
- <img alt="alt text" src="../lab2_images/image-24.png" /></p>
+<p><strong>Microsoft Outlook</strong> をクリックし、<strong>Send an email using Outlook</strong> の中で <strong>Add skill</strong> を選択します。 これで、このスキルは <strong>Added</strong> として表示されます。<br />
+<img alt="alt text" src="../lab2_images/image-24.png" /></p>
 </li>
 <li>
-<p><strong>Chat</strong>画面に移動すると (<strong>Menu</strong> -&gt; <strong>Chat</strong>) 、このセクションで追加された 2 つのスキルが表示されます。
+<p><strong>Chat</strong> 画面に移動すると (<strong>Menu</strong> -&gt; <strong>Chat</strong>) 、このセクションで追加された 2 つのスキルが表示されます。☆
  <img alt="alt text" src="../lab2_images/image-25.png" /></p>
 </li>
 <li>
 <p>これで、<strong>Send emaill</strong> スキルを追加するセクションは完了です。</p>
 </li>
 </ol>
-<h2 id="step4">Step4:自身のメールアドレスへメールを送り、スキルをテストしてみよう</h2>
+<h2 id="_4">自身のメールアドレスへメールを送り、スキルをテストしてみよう</h2>
 <p>このステップでは、スキルを Microsoft Outlook に接続します。 この資格情報は、講師から提供されます。</p>
 <ol>
 <li>
-<p><strong>Chat</strong>画面に移動します。</p>
+<p><strong>Chat</strong> 画面に移動します。</p>
 </li>
 <li>
-<p><strong>Send email</strong>スキルを選択します。右下にリンク切れのマークが表示されています。これは、スキルがどの E メール・システムにも接続されていないことを意味します。
- <img alt="alt text" src="../lab2_images/image-26.png" /></p>
+<p><strong>Send email</strong> スキルを選択します。右下にリンク切れのマークが表示されています。これは、スキルがどのメールシステムにも接続されていないことを意味します。<br />
+<img alt="alt text" src="../lab2_images/image-26.png" /></p>
 </li>
 <li>
 <p>リンク切れの (緑色のボックスで囲んだ)マークをクリックします。 スキルが Microsoft Outlook に接続されていないことが通知されます。 <strong>Connect app</strong> をクリックして Microsoft Outlook に接続します。 
  <img alt="alt text" src="../lab2_images/image-29.png" /></p>
 </li>
 <li>
-<p><strong>Type</strong> にデフォルト値の <strong>Non-admin user</strong> を使用し、<strong>Connect app</strong> ボタンをクリックします。 これにより、Outlookに移動します。 講師から提供される資格情報を使用します (IBM のメールアドレスを使用して Outlook に接続することはできません) 。
- <img alt="alt text" src="../lab2_images/image-28.png" /></p>
+<p><strong>Type</strong> はデフォルト値の <strong>Non-admin user</strong> を使用し、<strong>Connect app</strong> ボタンをクリックします。 これにより、Outlookに移動します。 講師から提供される資格情報を使用します。 (IBM のメールアドレスを使用して Outlook に接続することはできません) <br />
+<img alt="alt text" src="../lab2_images/image-28.png" />  </p>
 </li>
 <li>
-<p><strong>!!! パスワードをブラウザーやパスワード・マネージャーに保存しないでください !!!</strong>
- <img alt="alt text" src="../lab2_images/image-27.png" /></p>
+<p><strong>※パスワードは、ブラウザーやパスワード・マネージャーに保存しないようにご注意ください。</strong><br />
+<img alt="alt text" src="../lab2_images/image-27.png" /></p>
 </li>
 <li>
 <p>アプリが接続されたことが確認できます。
@@ -669,91 +675,153 @@
 <p>スキルをテストするために <strong>Chat</strong> 画面に移動します。<strong>Send an email</strong> スキルをクリックします。</p>
 </li>
 <li>
-<p><strong>To:</strong> の欄はご自身のメールアドレスを使用します。件名を <strong>Subject</strong> の欄に記入します。（例: <code>Test send email skill</code>）<strong>Content</strong> 欄はメール本文を入力します。（例: <code>Hello and welcome!</code>）<strong>Apply</strong> ボタンをクリックします。
+<p><strong>To:</strong> の欄はご自身のメールアドレスを使用します。<strong>Subject</strong> の欄に件名を記入します。（例: <code>Test send email skill</code>）<strong>Content</strong> 欄はメール本文を入力します。（例: <code>Hello and welcome!</code>）<strong>Apply</strong> ボタンをクリックします。
  <img alt="alt text" src="../lab2_images/image-31.png" /></p>
 </li>
 <li>
-<p><strong>The email was sent</strong> というメッセージが表示されます。ご自身のメールボックスにメールが送信されているか確認してみてください。</p>
+<p><code>The email was sent</code> というメッセージが表示されます。ご自身のメールボックスにメールが送信されているか確認してみてください。</p>
 </li>
 <li>
 <p>これで <strong>Send email</strong> スキルをテストするステップは完了です。</p>
 </li>
 </ol>
-<h2 id="step52">Step5:2つのスキルを組み合わせてスキルフローを作成しよう</h2>
-<p>これまでは、個々のスキルをインポートし、追加し、テストしました。watsonx Orchestrate では、個々のスキルだけでなく、2つ以上のスキルを組み合わせて、スキルフローを作成することができます。 手順は以下のとおりです。</p>
+<h2 id="2">2つのスキルを組み合わせてスキルフローを作成しよう</h2>
+<p>これまでは、個々のスキルのインポート、追加、テストを行いました。watsonx Orchestrate では、個々のスキルだけでなく、2つ以上のスキルを組み合わせて、スキルフローを作成することができます。 手順は以下のとおりです。</p>
 <ol>
 <li>
-<p><strong>Menu</strong> -&gt; <strong>BUild</strong> -&gt; <strong>Skills</strong> に移動します。</p>
+<p><strong>Menu</strong> -&gt; <strong>Build</strong> -&gt; <strong>Skills</strong> に移動します。</p>
 </li>
 <li>
-<p><strong>Ass skills</strong> のドロップダウンリスト () から <strong>Create an skill flow</strong> を選択します。
+<p><strong>Add skills</strong> のドロップダウンリスト (∨) から <strong>Create an skill flow</strong> を選択します。
  <img alt="alt text" src="../lab2_images/image-32.png" /></p>
 </li>
 <li>
-<p>スキルフローに名前を付けるため、<strong>鉛筆</strong> アイコンをクリックします。例:<code>Generate content and send emai - YourName</code>、<strong>YourName</strong> は <strong>TaroYamada</strong> のようにすることをお勧めします。
+<p><strong>鉛筆</strong> アイコンをクリックし、スキルフローに名前を付けます。例:<code>Generate content and send email - YourName</code>、<strong>YourName</strong> の部分は <strong>TaroYamada</strong> のようにすることをお勧めします。
  <img alt="alt text" src="../lab2_images/image-33.png" /></p>
 </li>
 <li>
-<p>名前を付け (フローの名前に自分の名前を含めて)、説明 (Description) を追加して保存します。
+<p>自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。
  <img alt="alt text" src="../lab2_images/image-34.png" /></p>
 </li>
 <li>
-<p>スキルを追加するには、<strong>+</strong> をクリックします。<strong>Generate content</strong> を検索して、ご自身の <strong>WxO Bootcamp - watsonx besic skill</strong> を選択します。
+<p>スキルを追加するには、<strong>+</strong> をクリックします。<strong>Generate content</strong> を検索して、ご自身の <strong>BAM content generation</strong> を選択します。☆
  <img alt="alt text" src="../lab2_images/image-35.png" /></p>
 </li>
 <li>
-<p>インポートさたスキルが表示されます。<strong>Add skill</strong> を選択します。
+<p>インポートされたスキルが表示されます。<strong>Add skill</strong> を選択します。★
  <img alt="alt text" src="../lab2_images/image-36.png" /></p>
 </li>
 <li>
-<p>このスキルがフローに追加されます。
+<p>このスキルがフローに追加されます。★
  <img alt="alt text" src="../lab2_images/image-37.png" /></p>
 </li>
 <li>
-<p>追加したスキルの後にある <strong>+</strong> をクリックします。 <strong>Send email</strong> を検索します。
+<p>追加したスキルの後にある <strong>+</strong> をクリックします。 <strong>Send email</strong> を検索します。☆
  <img alt="alt text" src="../lab2_images/image-38.png" /></p>
 </li>
 <li>
-<p><strong>Microsoft Outlook</strong> をクリックすると、<strong>Microsoft Outlook</strong> の下にグループ化されたすべてのスキルが表示されます。 <strong>Send an email</strong> の中の <strong>Add Skill</strong> をクリックします。
- <img alt="alt text" src="../lab2_images/image-39.png" /></p>
+<p><strong>Microsoft Outlook</strong> をクリックすると、Outlook と連携して利用できるすべてのスキルが表示されます。 <strong>Send an email</strong> を探し <strong>Add Skill</strong> をクリックします。<br />
+<img alt="alt text" src="../lab2_images/image-39.png" /></p>
 </li>
 <li>
-<p>これで、スキル・フローが作成されました。 以下のようになります。
+<p>これで、スキルフローが作成されました。全体像は以下のようになります。☆
  <img alt="alt text" src="../lab2_images/image-40.png" /></p>
 </li>
 <li>
-<p>生成されたコンテンツをメールの受信者に送信するために、最初のスキルの出力を 2 番目のスキルの入力にマップします。これを行うには、<strong>Generate content (YourName)</strong> をクリックします。
+<p>生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、<strong>YourName-generate content</strong> をクリックします。☆
  <img alt="alt text" src="../lab2_images/image-41.png" />
- Inputのパラメーターを確認してください。 他のスキルの出力をこれらのパラメーターにマップできます。 ここでは <strong>text</strong> の形式で出力されるものが 1 つあります。</p>
+ Inputのパラメーターを確認してください。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。 ここでは <strong>generated_text</strong> の形式で出力されるものが 1 つだけあります。</p>
 </li>
 <li>
-<p>次に、<strong>Send an email</strong> をクリックしてinput と OUtput のパラメーターを確認します。
- <img alt="alt text" src="../lab2_images/image-42.png" />
- <strong>INput</strong> タブをクリックしてください。<strong>body.Content</strong> の欄をクリックすると、
- <img alt="alt text" src="../lab2_images/image-43.png" />
- <strong>注意:</strong></p>
-</li>
-<li></li>
-<li>
-<p><img alt="alt text" src="../lab2_images/image-44.png" /></p>
+<p>次に、<strong>Send an email</strong> をクリックしてinput と Output のパラメーターを確認します。<br />
+<img alt="alt text" src="../lab2_images/image-42.png" />
+ <strong>Input</strong> タブをクリックしてください。<strong>body.Content</strong> の欄をクリックすると、<strong>Available Mappings</strong>の中に <strong>YourName-generate text</strong> スキルの出力が表示されます。<strong>YourName-generate text"</strong> をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、<strong>generated_text</strong> を選択します。☆
+ <img alt="alt text" src="../lab2_images/image-43.png" /><br />
+<strong>注意:</strong> 必ず<strong>ご自身の名前</strong>が入ったスキルを選択してください。</p>
 </li>
 <li>
-<p><img alt="alt text" src="../lab2_images/image-45.png" /></p>
+<p>追加で制御できるオプションは他にもあります。例：エンドユーザーから見えないようにInput欄を非表示にする、など。</p>
 </li>
 <li>
-<p><img alt="alt text" src="../lab2_images/image-46.png" /></p>
+<p><strong>Actions</strong> -&gt; <strong>Save</strong> をクリックして、スキルフローを保存します。 以下のように正常に保存されたことが表示されたら、<strong>Close</strong> をクリックして編集画面を閉じます。<br />
+<img alt="alt text" src="../lab2_images/image-44.png" /></p>
 </li>
 <li>
-<p><img alt="alt text" src="../lab2_images/image-47.png" /></p>
+<p>ご自身の名前を用いてスキルを検索します。（自身の名前をスキル名に追加する利点の1つです）
+ <img alt="alt text" src="../lab2_images/image-45.png" /></p>
 </li>
 <li>
-<p><img alt="alt text" src="../lab2_images/image-48.png" /></p>
+<p>次以降のステップのために、<strong>Enhance this skill</strong> を選択します。
+ <img alt="alt text" src="../lab2_images/image-46.png" /></p>
+</li>
+<li>
+<p>watsonx Orchestrate がスキルを認識できるように、スキルを呼び出すフレーズを登録してトレーニングする必要があります。<br />
+<strong>Phrases</strong> タブをクリックし、空の欄に <strong>Generate content and send email to YourName</strong> (<strong>YourName</strong> はご自身の名前に変更してください。例: TaroYamada) を入力し、Enter を押します。（<strong>必ず Enter を押す必要があります</strong>）<br />
+ 任意でさらにフレーズを追加し、<strong>Publish</strong> ボタンをクリックします。
+ <img alt="alt text" src="../lab2_images/image-47.png" /></p>
+</li>
+<li>
+<p>スキルフローを公開すると、スキルが正常に公開されたというメッセージが表示されます。★
+ <img alt="alt text" src="../lab2_images/image-48.png" /></p>
 </li>
 <li>
 <p>以上でこのステップは完了です。</p>
 </li>
 </ol>
-<h2 id="step6">Step6:メールを生成し、自身のメールアドレスに送信して、スキルをテストしてみよう</h2>
+<h2 id="_5">メールを生成し、自身のメールアドレスに送信して、スキルをテストしてみよう</h2>
+<p>最後に、先ほど組み合わせたスキルフローをテストしてみます。</p>
+<ol>
+<li>
+<p><strong>Menu</strong> -&gt; <strong>Skills Catalog</strong> に移動します。</p>
+</li>
+<li>
+<p>先ほど作成したスキルフローはカタログから見られるようになります。自身のスキルセットに追加するため、<strong>Add skill from the catalog</strong> をクリックします。</p>
+</li>
+<li>
+<p>検索欄にご自身の名前を入力します。
+ <img alt="alt text" src="../lab2_images/image-49.png" /></p>
+</li>
+<li>
+<p><strong>Skill flows</strong> をクリックすると、作成したスキルフローが表示されます。<br />
+<img alt="alt text" src="../lab2_images/image-50.png" /><br />
+<strong>注釈:</strong> 複数のスキルが表示される場合は、ご自身の名前のスキルを選択してください。（必要に応じて検索機能を使ってください）</p>
+</li>
+<li>
+<p><strong>Add skill</strong> をクリックし、自身のスキルセットに追加します。<strong>Added</strong> と表示されたら、<strong>Chat</strong> 画面に移動します。</p>
+</li>
+<li>
+<p>スキルをテストするには、以下のいずれかを実行します。</p>
+<ol>
+<li>
+<p>スキルをクリックして実行します。
+<img alt="alt text" src="../lab2_images/image-51.png" /></p>
+</li>
+<li>
+<p>スキルを Enhance する際に設定したフレーズの一部を入力します。例：<strong>generate content</strong>
+<img alt="alt text" src="../lab2_images/image-52.png" /><br />
+表示された候補から、適切な文章を選択します。もし選択した文章と複数のスキルが合致していたら、watsonx Orchestrate はそれらのスキルを候補として提示します。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>最初はウェルカムメッセージを生成します。そのために、 <strong>input</strong> に適切な文章を入力します。
+ <img alt="alt text" src="../lab2_images/image-53.png" /></p>
+</li>
+<li>
+<p><strong>Apply</strong> ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルのコンテンツの欄にコピーします。宛先にご自身のメールアドレスを入力し、<strong>Apply</strong> ボタンをクリックします。
+ <img alt="alt text" src="../lab2_images/image-54.png" /></p>
+</li>
+<li>
+<p>メールが送信されたというメッセージが表示されます。<br />
+<img alt="alt text" src="../lab2_images/image-55.png" />  </p>
+</li>
+<li>
+<p>メールが送られているか、ご自身のメールボックスを確認してください。</p>
+</li>
+</ol>
+<p>以上で Lab2 は完了です。このラボでは、OpenAPI でスキルをインポートし、スキルを公開してテストを行いました。<br />
+次に、プリビルドスキルを自身のスキルセットに追加し、テストを行いました。<br />
+最後に、それら2つのスキルを組み合わせ、1 つ目のスキルの出力を 2 つ目のスキルの入力にマッピングして、スキルフローを作成しました。</p>
 
 
 
