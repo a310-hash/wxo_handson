@@ -329,6 +329,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前提条件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#web-openapi" class="md-nav__link">
     <span class="md-ellipsis">
       資料の Web ページから OpenAPI 仕様書を生成してみよう
@@ -368,6 +377,15 @@
   <a href="#openapi-openapi-builder" class="md-nav__link">
     <span class="md-ellipsis">
       OpenAPI仕様書を OpenAPI builder からダウンロードしてみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      お疲れさまでした！
     </span>
   </a>
   
@@ -437,7 +455,13 @@
 
 
 <h1 id="openapi-builder">OpenAPI builder</h1>
+<p>watsonx Orchestrate でカスタムスキルを使う際には、OpenAPIの仕様書が必要です。ただ、時には仕様書がない場合もあります。その際に、仕様書を作成できるのが OpenAPI Builder です。</p>
 <p>このLabでは、OpenAPI builder を用いて Open API の仕様書（OAS）の作成、編集、生成を行う方法を練習します。</p>
+<h2 id="_1">前提条件</h2>
+<ol>
+<li>watsonx Orchestrateの環境にアクセスできること。</li>
+<li>IBM-idを用いてログイン可能であること。</li>
+</ol>
 <h2 id="web-openapi">資料の Web ページから OpenAPI 仕様書を生成してみよう</h2>
 <p>AIを使用して、資料の Web ページから OpenAPI の仕様書を生成できます。手順は以下のようになります。</p>
 <ol>
@@ -547,6 +571,11 @@
 <p>OpenAPI builder から、OpenAPI 仕様書を JSON ファイルでローカルにダウンロードし、watsonx Orchestrate や他のツールにインポートすることができます。もちろん、OpenAPI builder に再インポートして編集することも可能です。</p>
 <p>ダウンロードするには、エディターの画面で <strong>Download spec</strong> をクリックします。
 <a class="glightbox" href="../OpenAPI_images/image-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../OpenAPI_images/image-13.png" /></a></p>
+<h2 id="_2">お疲れさまでした！</h2>
+<p>このLabでは、OpenAPI builder を用いて、OpenAPI の仕様書を作成、編集、生成する方法を確認しました。
+仕様書はWebページからAIで自動生成できるほか、既存ファイルの編集や、新規作成も可能です。
+作成時のビューは、Visual+AI view、JSON view、OpenAPI view の3つを使用でき、AIによる提案も活用できます。
+仕様書の作成後は、watsonx Orchestrate にインポートしてスキルとして利用できます。</p>
 
 
 

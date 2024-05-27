@@ -535,7 +535,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>このセクションでは、Inputノードの定義をしていきます。</p>
 <ol>
 <li>
-<p>Inputノードをクリックし、左側に表示される編集欄から、Node nameを<strong>applicant name</strong>に変更してください。<br />
+<p>Inputノードをクリックし、右側に表示される編集欄から、Node nameを<strong>applicant name</strong>に変更してください。<br />
 <a class="glightbox" href="../lab3_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-7.png" /></a></p>
 </li>
 <li>
@@ -588,7 +588,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>次に、意思決定ノードの中で実行されるルールをいくつか作成します。ルールは構文形式と意思決定表の形式で記述することが可能です。(日本語を用いることも可能ですが、現在のバージョンではサポートされていないため英語での記述になります。)</p>
 <ol>
 <li>
-<p>初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Loanタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。<br />
+<p>初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Logicタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。<br />
 <a class="glightbox" href="../lab3_images/image-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-12.png" /></a></p>
 </li>
 <li>
@@ -600,11 +600,11 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-14.png" /></a></p>
 </li>
 <li>
-<p>次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を<strong>decline low credit score</strong>として、criteria chocesでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
+<p>次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を<strong>decline low credit score</strong>として、Select the criteria for your ruleでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
 <a class="glightbox" href="../lab3_images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-17.png" /></a></p>
 </li>
 <li>
-<p>ルールのテンプレートを以下の様に修正します。<br />
+<p>ルールのテンプレートを以下の様に修正します。なお、ctrl+Spaceでコード補完が可能です。<br />
 <a class="glightbox" href="../lab3_images/image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-18.png" /></a></p>
 </li>
 <li>
@@ -644,7 +644,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-26.png" /></a></p>
 </li>
 <li>
-<p>オペレーションの設定画面が表示されるので、Operation nameを<strong>XX Personal Loan</strong>、source modelとして XX Personal Loanを選択してから<strong>save</strong>をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。<br />
+<p>オペレーションの設定画面が表示されるので、Operation nameを<strong>XXPersonalLoan</strong>、source mComponentとして XX Personal Loanを選択してから<strong>save</strong>をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。<br />
 <a class="glightbox" href="../lab3_images/image-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-27.png" /></a></p>
 </li>
 <li>
@@ -741,17 +741,15 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>メモ帳やエディタなどで保存したファイルを開きます。各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については<a href="https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties">Understanding x-properties</a>を参照してください。</p>
 </li>
 <li>
-<p><strong>epmployed</strong>は以下の様に設定されています。<strong>,"default": "true"</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください）</p>
-</li>
-</ol>
+<p><strong>epmployed</strong>は以下の様に設定されています。<strong>,"default": "true"</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
 <div class="highlight"><pre><span></span><code>    &quot;employed&quot;: {
                 &quot;type&quot;: &quot;boolean&quot;,
                 &quot;x-ibm-order&quot;: 3,
                 &quot;x-ibm-multiline&quot;: &quot;false&quot;,
                 &quot;default&quot;: &quot;true&quot;
                 },
-</code></pre></div>
-<ol>
+</code></pre></div></p>
+</li>
 <li>
 <p>同様にSSNの部分を修正し、以下の様に <strong>,"x-ibm-show": "false"</strong>を追加してください。
 <div class="highlight"><pre><span></span><code>    &quot;SSN&quot;: {
@@ -839,7 +837,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-59.png" /></a></p>
 </li>
 <li>
-<p>次に、incomeが0から10000の場合はdeclineとなるルールを追加してみましょう。1行目のminに<strong>0</strong>,maxに<strong>10000</strong>,Decisionに"decline"を入力してください。<br />
+<p>次に、incomeが0から10000の場合はdeclineとなるルールを追加してみましょう。1行目のminに<strong>0</strong>,maxに<strong>10000</strong>,Decisionに"declined"を入力してください。<br />
 <a class="glightbox" href="../lab3_images/image-60.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-60.png" /></a></p>
 </li>
 <li>

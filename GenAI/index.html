@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#genai" class="md-skip">
+        <a href="#automation-builder-ai" class="md-skip">
           Skip to content
         </a>
       
@@ -312,6 +312,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GenAI
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -321,6 +332,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前提条件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automation (生成AI) を作成してみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロンプトを作成してみよう
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -361,7 +418,75 @@
                   
 
 
-<h1 id="genai">GenAI</h1>
+<h1 id="automation-builder-ai">Automation builder (生成AI)</h1>
+<p>Automation Builderでは、ワークフローやルールエンジンに加え、生成AIのプロンプトを作成することができます。</p>
+<h2 id="_1">前提条件</h2>
+<ol>
+<li>watsonx Orchestrateの環境にアクセスできること。</li>
+<li>IBM-idを用いてログイン可能であること。</li>
+</ol>
+<h2 id="automation-ai">Automation (生成AI) を作成してみよう</h2>
+<p>Automation builder では、Lab3 と同様に Automation のアプリケーションを作成し、生成AI のプロンプトを作成できます。</p>
+<ol>
+<li>
+<p>メニュー(≣)から <strong>Automations</strong> を選択します。<br />
+<a class="glightbox" href="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_27-5-2024_111327_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_27-5-2024_111327_dl.watson-orchestrate.ibm.com.jpeg" /></a>   </p>
+</li>
+<li>
+<p><strong>Create automation +</strong> をクリックし、新規の Automation を作成します。
+ <a class="glightbox" href="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_27-5-2024_114423_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_27-5-2024_114423_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+</li>
+<li>
+<p>Create automation のウィンドウで、名前の欄に <strong>YourName-GenAI</strong> と入力し、<strong>Create</strong> をクリックします。<br />
+<a class="glightbox" href="../GenAI_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/image.png" /></a></p>
+</li>
+<li>
+<p>生成AIを選択します。
+ <a class="glightbox" href="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_27-5-2024_115556_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_27-5-2024_115556_dl.watson-orchestrate.ibm.com.jpeg" /></a>
+ 名前を <strong>YourName GenAI test</strong> と入力して、<strong>Create</strong> をクリックします。
+ <a class="glightbox" href="../GenAI_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/image-2.png" /></a></p>
+</li>
+</ol>
+<p>こちらで、Automation と 生成AIのコンポーネント が作成されました。作成されると、プロンプト・エディターが開きます。</p>
+<h2 id="_2">プロンプトを作成してみよう</h2>
+<p>プロンプト・エディターを用いて、プロンプトを作成し、出力を生成することができます。</p>
+<ol>
+<li>
+<p><strong>Model:</strong> のプルダウンメニューから、使いたいモデルを選択します。</p>
+</li>
+<li>
+<p>プロンプトを作成します。</p>
+<ol>
+<li>
+<p>(オプション) <strong>Context</strong> にモデルへの指示文を入力します。</p>
+</li>
+<li>
+<p>(オプション) <strong>Pronpt input</strong> にモデルに応答してほしい文章を入力します。</p>
+</li>
+<li>
+<p>(オプション) 変数を追加します。
+ 変数は、生成AIの入力として使用されます。変数を使用しない場合も、少なくとも1つの変数を定義する必要があります。</p>
+<ol>
+<li><strong>Variable</strong> の欄で <strong>New variable</strong> をクリックします。</li>
+<li>変数に名前を付け、デフォルト値を入力します。 変数の名前と値は String でなければなりません。</li>
+<li><strong>Prompt Input</strong> または <strong>Context</strong> の欄で、プロンプトに変数を挿入します。<ul>
+<li>変数名は、二重の中括弧 {} で囲む必要があります。 (例: {{topic}})</li>
+<li>以下の方法で、変数を自動的に挿入できます。<ul>
+<li><strong>+</strong> アイコン（Add variable）をクリックし、リストから変数を選択します。</li>
+<li>欄内で <strong>Ctrl + スペース</strong>をクリックし、変数を選択します。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>(オプション) <strong>Parameters</strong> の欄でトークンを設定し、生成される出力の長さを制限します。
+ トークンは、</li>
+</ol>
+<p>シナリオ考える（メールなど）
+ 日本語で動かして（llama-2）にして</p>
+</li>
+</ol>
 
 
 

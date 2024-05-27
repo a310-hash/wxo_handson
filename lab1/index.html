@@ -476,7 +476,7 @@ watsonx Orchestrateへ様々な処理を依頼するためのチャット画面 
 スキルの追加やスキルフローの作成を行います。  </p>
 <p>4.AI assistant builder<br />
 外部のWebサイトなどに組みこんだり、Slackなどのチャネルと統合可能なAIアシスタントの構成が可能です。  </p>
-<p>5.Automations
+<p>5.Automations<br />
 意思決定、ワークフロー、生成AIに関する処理をローコードで実装し、スキルとして公開が可能です。  </p>
 <p>6.ヘルプ<br />
 各種ヘルプへのリンクが表示されます。複数アカウントに所属する場合には、Swtich Accountからアカウントの切り替えが可能です。  </p>
@@ -534,7 +534,7 @@ paths:
 </code></pre></div></p>
 </li>
 <li>
-<p>今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてください。更新後のファイルは以下のようになるはずです。
+<p>今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてファイルを保存してください。更新後のファイルは以下のようになるはずです。
 <div class="highlight"><pre><span></span><code>openapi: 3.0.3
 info:
   title: SH-helloworld-watsonx
@@ -662,9 +662,9 @@ paths:
 </li>
 </ol>
 <h2 id="_3">スキルの動作確認</h2>
-<p>カタログから追加したスキルは以下の2つの方法で実行可能です:
-- チャット画面下部に表示されているスキルをクリックする
-- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateがしたいされたフレーズを元に学習するため、完全一致する必要はありません)を入力する</p>
+<p>カタログから追加したスキルは以下の2つの方法で実行可能です:<br />
+- チャット画面下部に表示されているスキルをクリックする<br />
+- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateが指定されたフレーズを元に学習するため、完全一致する必要はありません)を入力する</p>
 <ol>
 <li>
 <p>チャットの入力欄に、<strong>Hello World WatsonX</strong>と入力してみてください。<br />
