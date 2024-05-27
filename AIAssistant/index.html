@@ -53,7 +53,16 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -145,43 +154,6 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
   </nav>
@@ -494,25 +466,25 @@
 <li>watsonx Orchestrateにログインします。</li>
 <li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
 <li>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。<br />
-<img alt="alt text" src="../lab1_images/image.png" /></li>
+<a class="glightbox" href="../lab1_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image.png" /></a></li>
 </ol>
 <h2 id="ai-assistant">AI Assistantの作成</h2>
 <ol>
 <li>
 <p><strong>AI Assistant Builder</strong>をクリックします。もしくは、左上のメニューから<strong>AI Assistant Builder</strong>を選択してもOKです。<br />
-<img alt="alt text" src="../AIAssistant_images/image.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image.png" /></a></p>
 </li>
 <li>
 <p>画面上部右にAssistantのリストがあります。そこを展開し、<strong>Create New ＋</strong>をクリックします。<br />
-<img alt="alt text" src="../AIAssistant_images/image-1.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-1.png" /></a></p>
 </li>
 <li>
 <p>Assistantの作成ダイアログが表示されるので、<strong>あなたのイニシャル-Assistant</strong>という名前を入力し、<strong>Create assistant</strong>をクリックしてください。Assistant Languageとして日本語を選択することも可能ですが、現時点で一部の機能が使用できないため<strong>English</strong>のままにしてください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-2.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-2.png" /></a></p>
 </li>
 <li>
 <p>Assistantが作成されます。画面下部に全体のアーキテクチャが表示されています。このハンズオンでは、<strong>General purpose</strong>、<strong>AI-guided</strong>、<strong>Skill-based</strong>の3つの動作を確認します。    <br />
-<img alt="alt text" src="../AIAssistant_images/image-3.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-3.png" /></a></p>
 </li>
 </ol>
 <h2 id="llm">LLMによる基本動作の確認</h2>
@@ -520,23 +492,23 @@
 <ol>
 <li>
 <p>左側のリストより、<strong>Generative AI</strong> を選択してください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-4.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-4.png" /></a></p>
 </li>
 <li>
 <p>以下のような画面が表示されます。この画面からは生成AIに関する設定を行うことが可能です。上部選択リストを展開し、利用可能なLLMを確認してください。今回はデフォルトで設定されている、graniteをそのまま使用します。<br />
-<img alt="alt text" src="../AIAssistant_images/image-5.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-5.png" /></a></p>
 </li>
 <li>
 <p>右下に表示されているプレビューの入力欄に<strong>What is IBM?</strong>と入力して送信してください。LLMによって一般的な質問に対しての回答が生成されます。　　<br />
-<img alt="alt text" src="../AIAssistant_images/image-6.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-6.png" /></a></p>
 </li>
 <li>
 <p>LLMが一般的な回答を行うかどうかは、Answer behaviorのGeneral purpose answeringで設定することが可能です。右側にあるトグルスイッチをクリックし、OFFにしてください。
-<img alt="alt text" src="../AIAssistant_images/image-8.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-8.png" /></a></p>
 </li>
 <li>
 <p>再びプレビューの入力欄に<strong>What is IBM?</strong>と入力してください。先ほどとは回答が異なることを確認します。<br />
-<img alt="alt text" src="../AIAssistant_images/image-9.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-9.png" /></a></p>
 </li>
 </ol>
 <h2 id="ai-guided-action">AI-Guided Actionの作成</h2>
@@ -544,23 +516,23 @@
 <ol>
 <li>
 <p>左側のメニューより、<strong>Actions</strong>を選択してください。  <br />
-<img alt="alt text" src="../AIAssistant_images/image-10.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-10.png" /></a></p>
 </li>
 <li>
 <p><strong>Create action +</strong>をクリックしてください。  <br />
-<img alt="alt text" src="../AIAssistant_images/image-11.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-11.png" /></a></p>
 </li>
 <li>
 <p>作成可能な3つのactionが表示されます。<strong>AI-Guilded action</strong>を選択してください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-12.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-12.png" /></a></p>
 </li>
 <li>
 <p>今回は日本語で動作するアクションを作成してみます。ダイアログが表示されるので、<strong>休暇の申請</strong>と入力し、<strong>Save</strong>をクリックしてください。 <br />
-<img alt="alt text" src="../AIAssistant_images/image-27.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-27.png" /></a></p>
 </li>
 <li>
 <p>左側のConfigurationをクリックすると設定画面が表示されます。Select modelから使用するLLMを選択することが可能です。今回は<strong>llama3-8b-instruct</strong>を選択してください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-28.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-28.png" /></a></p>
 </li>
 <li>
 <p>Add knowledgeの欄に以下のテキストをコピー＆ペーストしてください。ここにLLMが動作する際に使用する知識を記入することで、知識に基づいた回答を生成することが可能です。<br />
@@ -570,26 +542,26 @@
 所属長は、Workdayにて申請された内容を確認し、速やかに承認処理を行ってください。Workdayの操作方法についてはこちらをご参照ください。
 （注）やむを得ない事情により申請が事後となった場合は、欠勤後の出社第1日目の終業時刻または当該欠勤日から1カ月後のうち、いずれか早い到来日までに所属長に申し出ることで、欠勤第1日から年休に振り替えることができます。ただし、無断欠勤の場合は、振り替えることができません。
 </code></pre></div>
-<img alt="alt text" src="../AIAssistant_images/image-15.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-15.png" /></a></p>
 </li>
 <li>
 <p>Add prompt instructionsの欄により詳細な指示を指定することが可能です。今回は日本語で回答することを明示的に指定するため、<strong>日本語で簡潔に回答してください</strong>と記入してください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-16.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-16.png" /></a></p>
 </li>
 <li>
 <p>右上のアイコンより変更を保存してください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-18.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-18.png" /></a></p>
 </li>
 <li>
 <p>右下のチャットのプレビューに<strong>休暇の申請はどこから行いますか？</strong>と記入して送信してください。Add knowledgeに記入した知識を元に回答が適切に生成されることを確認してください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-17.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-17.png" /></a></p>
 </li>
 <li>
 <p>休暇に関する質問をいくつかして、動作を確認してください。</p>
 </li>
 <li>
 <p>右上の<strong>x</strong>をクリックして、設定画面を閉じてください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-19.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-19.png" /></a></p>
 </li>
 </ol>
 <h2 id="skill-based-action">Skill based Actionの作成</h2>
@@ -597,27 +569,27 @@
 <ol>
 <li>
 <p><strong>create action</strong>をクリックしてください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-20.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-20.png" /></a></p>
 </li>
 <li>
 <p>Skill-basedアクションをクリックしてください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-21.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-21.png" /></a></p>
 </li>
 <li>
 <p>スキルの選択画面が表示されるので、Lab3で作成した<strong>XXPersonalLoan</strong>を選択し、右上の<strong>Next</strong>をクリックしてください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-23.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-23.png" /></a></p>
 </li>
 <li>
 <p>Phraseとして<strong>ローンの審査</strong>と入力し右上の<strong>create and review</strong>をクリックしてください。なお、スキルを呼び出すためのフレーズは複数指定することで認識の精度が高まります。
-<img alt="alt text" src="../AIAssistant_images/image-24.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-24.png" /></a></p>
 </li>
 <li>
 <p>右下のチャット・プレビューに<strong>ローンの審査</strong>と記入し、送信してください。スキルが呼び出され入力フォームが表示されます。なお、watsonx Orchestrateでは設定でフォーム入力にするか、チャットで1つづつ入力パラメータを確認するかの設定が可能です。<br />
-<img alt="alt text" src="../AIAssistant_images/image-25.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-25.png" /></a></p>
 </li>
 <li>
 <p><strong>Close</strong>をクリックしてください。<br />
-<img alt="alt text" src="../AIAssistant_images/image-26.png" /></p>
+<a class="glightbox" href="../AIAssistant_images/image-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../AIAssistant_images/image-26.png" /></a></p>
 </li>
 </ol>
 <h2 id="_2">お疲れさまでした！</h2>
@@ -669,5 +641,7 @@
       <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
