@@ -476,9 +476,9 @@
 <p>このセクションでは、watsonx Orchestrate の主な画面構成について学びます。</p>
 <ol>
 <li>watsonx Orchestrate にログインします。</li>
-<li>スキルを定義した <a href="../files/wxO%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3_BAM_Content_Generation.json">OpenAPI ファイル</a>をダウンロードします。リンクを<strong>右クリック</strong>して<strong>名前を付けてリンクを保存</strong>を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。</li>
+<li>スキルを定義した <a href="./files/wxOハンズオン_BAM_Content_Generation.json">OpenAPI ファイル</a>をダウンロードします。リンクを<strong>右クリック</strong>して<strong>名前を付けてリンクを保存</strong>を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。</li>
 <li>お好みのエディター (VSCode、vi/vim など) を用いてファイルを編集します。</li>
-<li><code>YourName-generate content skill for wxO Handson</code> (8行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、<code>TaroYamada-generate content</code>)。同様に、<code>YourName-generate content</code> (26行目) も変更します。</li>
+<li><code>YourName-IBM BAM</code> (4行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、<code>TaroYamada-IBM BAM</code>)。同様に、<code>YourName-generate content skill for wxO Handson</code> (8行目)、<code>YourName-generate content</code> (26行目) も変更します。</li>
 <li>ファイルを保存します。</li>
 <li>
 <p>watsonx Orchestrateの画面で<strong>Skills and apps</strong>→<strong>Add skills</strong>を選択します。
@@ -489,12 +489,12 @@
  <a class="glightbox" href="../lab2_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-2.png" /></a></p>
 </li>
 <li>
-<p>先ほど編集した<code>wxOハンズオン - BAM generate content.json</code>という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。<strong>Next</strong>をクリックします。☆
- <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_16221_dl.watson-orchestrate.ibm.com-1.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_16221_dl.watson-orchestrate.ibm.com-1.jpeg" /></a></p>
+<p>先ほど編集した<code>wxOハンズオン - BAM generate content.json</code>という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。<strong>Next</strong>をクリックします。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_1602_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_1602_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>インポートするスキルのチェックボックスにチェックを入れ、<strong>Add</strong>をクリックします。☆
- <a class="glightbox" href="../lab2_images/image-60.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-60.png" /></a></p>
+<p>インポートするスキルのチェックボックスにチェックを入れ、<strong>Add</strong>をクリックします。
+ <a class="glightbox" href="../lab2_images/image-68.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-68.png" /></a></p>
 </li>
 <li>
 <p>スキルのインポートに成功すると、以下のように表示されます。<br />
@@ -506,12 +506,12 @@
 </li>
 <li>
 <p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています。 (先ほど、jsonファイルで変更した部分です)
- <a class="glightbox" href="../lab2_images/image-62.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-62.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/image-69.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-69.png" /></a></p>
 </li>
 <li>
 <p><strong>Input</strong>タブをクリックします。required (必須) の欄とそうでない欄があることが確認できます。この画面は、インポートしたスキルを実行する際の入力項目を表しています。<br />
  必須になっている項目の <strong>Edit response</strong> をクリックし、テキストを入力してみましょう。例：<code>create welcome email to new hires</code>（スキルの実行時に例文として表示されます。）<br />
-<a class="glightbox" href="../lab2_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-8.png" /></a></p>
+<a class="glightbox" href="../lab2_images/image-70.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-70.png" /></a></p>
 </li>
 <li>
 <p>他のタブも同様に動作を確認できます。</p>
@@ -523,14 +523,14 @@
 </li>
 <li>
 <p><strong>Phrases</strong>タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。
-<a class="glightbox" href="../lab2_images/image-63.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-63.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/image-71.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-71.png" /></a></p>
 </li>
 <li>
-<p>フレーズのテキスト欄に、<code>generate content</code>を入力し<strong>Enter(return)</strong> を押します。<br />
+<p>フレーズの欄に、<code>generate content</code>を入力し<strong>Enter(return)</strong> を押します。<br />
 <strong>注釈:</strong> フレーズを入力するには<strong>Enter(return)</strong> を押さなければなりません。<br />
-<code>generate</code>,<code>content</code>などが含まれるフレーズを自由に追加することも可能です。
+<code>generate</code>,<code>content</code>などが含まれるフレーズを自由に追加することも可能です。また、<strong>Auto-generate phrases</strong> をクリックすると、生成AIが自動でフレーズを生成してくれます。<br />
  最後に、<strong>Publish</strong>を押します。
- <a class="glightbox" href="../lab2_images/image-64.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-64.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/image-72.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-72.png" /></a></p>
 </li>
 <li>
 <p>スキルが公開（publish）できたというメッセージが表示されます。<br />
@@ -556,7 +556,7 @@
 </li>
 <li>
 <p>検索バーで、<code>generate content</code>を検索します。 <strong>YourName-generate content skill for wxO Handson</strong> という名前のアプリケーションを開き、先ほど作成した<strong>YourName-generate content</strong> というスキルを開きます。
- <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172215_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172215_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_162835_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_162835_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p>スキルを追加する前に、このスキルを接続するための API キーを指定し、スキルを使用するときに必要な出力を設定する必要があります。 この<strong>API キー</strong>は、<a href="https://bam.res.ibm.com/">IBM Research BAM</a> にアクセスして、APIキーをコピーします。
@@ -564,38 +564,36 @@
 </li>
 <li>
 <p>スキルカタログの画面に戻り、<strong>Connect app</strong> ボタンをクリックします。<br />
-<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172546_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172546_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p>コピーした<strong>API キー</strong>を貼り付け、APIキーの冒頭に <strong>Bearer + 半角スペース</strong> を追加します。<strong>Connect app</strong> ボタンをクリックします。 指定された<strong>API キー</strong>が有効な場合は、画面に正常な通知が表示されます。
- <a class="glightbox" href="../lab2_images/image-66.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-66.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/image-73.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-73.png" /></a></p>
 </li>
 <li>
 <p>次に<strong>Add skill</strong> をクリックします。
- <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172959_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_172959_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_163731_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_163731_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p>スキルが追加された (<code>Added</code>) というメッセージが表示されます。
- <a class="glightbox" href="../lab2_images/image-67.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-67.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/image-74.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-74.png" /></a></p>
 </li>
 <li>
-<p><strong>Chat</strong> 画面に戻ります。これで、スキルが表示されます。<br />
-<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_174444_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_174444_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+<p><strong>Chat</strong> 画面に戻ります。追加したスキルが表示されています。<br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164033_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164033_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p>スキルをテストするには、該当のスキルをクリックします。 </p>
 </li>
 <li>
-<p>前のステップで説明したように、input は必須項目になっているため入力する必要があります。 </p>
-</li>
-<li>
-<p>input の欄に、<code>create welcome email to new hires</code>と入力します。<strong>Show all fields</strong> は、その他のパラメータを確認し、設定することができます。<br />
+<p>前のステップで説明したように、input は必須項目になっているため、必ず入力する必要があります。<br />
+ input の欄に、<code>create welcome email to new hires</code>と入力します。<strong>Show all fields</strong> は、その他のパラメータを確認し、設定することができます。<br />
  入力が完了したら、<strong>Apply</strong> をクリックします。<br />
-<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_182333_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_26-5-2024_182333_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164826_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164826_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>スキルが実行されると、進行状況が表示され、<code>working on it</code> というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。★
- <a class="glightbox" href="../lab2_images/image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-21.png" /></a></p>
+<p>スキルが実行されると、進行状況が表示され、<code>working on it</code> というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。
+ <a class="glightbox" href="../lab2_images/image-75.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-75.png" /></a></p>
 </li>
 <li>
 <p>以上で、メールのコンテンツを生成するテストは完了です。</p>
@@ -619,8 +617,8 @@ Outlook に接続してメールを送信できるようにするには資格情
 <a class="glightbox" href="../lab2_images/image-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-24.png" /></a></p>
 </li>
 <li>
-<p><strong>Chat</strong> 画面に移動すると (<strong>Menu</strong> -&gt; <strong>Chat</strong>) 、このセクションで追加された 2 つのスキルが表示されます。☆
- <a class="glightbox" href="../lab2_images/image-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-25.png" /></a></p>
+<p><strong>Chat</strong> 画面に移動すると (<strong>Menu</strong> -&gt; <strong>Chat</strong>) 、このセクションで追加された 2 つのスキルが表示されます。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_17034_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_17034_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p>これで、<strong>Send emaill</strong> スキルを追加するセクションは完了です。</p>
@@ -673,77 +671,78 @@ Outlook に接続してメールを送信できるようにするには資格情
 <p><strong>Menu</strong> -&gt; <strong>Build</strong> -&gt; <strong>Skills</strong> に移動します。</p>
 </li>
 <li>
-<p><strong>Add skills</strong> のドロップダウンリスト (∨) から <strong>Create an skill flow</strong> を選択します。
- <a class="glightbox" href="../lab2_images/image-32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-32.png" /></a></p>
+<p><strong>Add skills</strong> のドロップダウンリスト (∨) から <strong>Create an skill flow</strong> を選択します。<br />
+<a class="glightbox" href="../lab2_images/image-32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-32.png" /></a>  </p>
 </li>
 <li>
-<p><strong>鉛筆</strong> アイコンをクリックし、スキルフローに名前を付けます。例:<code>Generate content and send email - YourName</code>、<strong>YourName</strong> の部分は <strong>TaroYamada</strong> のようにすることをお勧めします。
+<p><strong>鉛筆</strong> アイコンをクリックし、スキルフローに名前を付けます。(例: Generate content and send email - YourName)<br />
+<strong>YourName</strong> の部分は <strong>TaroYamada</strong> のようにすることをお勧めします。
  <a class="glightbox" href="../lab2_images/image-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-33.png" /></a></p>
 </li>
 <li>
-<p>自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。
- <a class="glightbox" href="../lab2_images/image-34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-34.png" /></a></p>
+<p>自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。(例: TaroYamada's generate content and send email)<br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_17854_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_17854_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>スキルを追加するには、<strong>+</strong> をクリックします。<strong>Generate content</strong> を検索して、ご自身の <strong>BAM generate content</strong> を選択します。☆
- <a class="glightbox" href="../lab2_images/image-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-35.png" /></a></p>
+<p>スキルを追加するには、<strong>+</strong> をクリックします。<strong>Generate content</strong> を検索して、ご自身の <strong>YourName-generate content skill for wxO Handson</strong> を選択します。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_17160_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_17160_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>インポートされたスキルが表示されます。<strong>Add skill</strong> を選択します。★
- <a class="glightbox" href="../lab2_images/image-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-36.png" /></a></p>
+<p>インポートされたスキルが表示されます。<strong>Add skill</strong> を選択します。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>このスキルがフローに追加されます。★
- <a class="glightbox" href="../lab2_images/image-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-37.png" /></a></p>
+<p>このスキルがフローに追加されます。
+ <a class="glightbox" href="../lab2_images/image-76.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-76.png" /></a></p>
 </li>
 <li>
-<p>追加したスキルの後にある <strong>+</strong> をクリックします。 <strong>Send email</strong> を検索します。☆
- <a class="glightbox" href="../lab2_images/image-38.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-38.png" /></a></p>
+<p>追加したスキルの後にある <strong>+</strong> をクリックします。 <strong>Send email</strong> を検索します。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_172315_dl.watson-orchestrate.ibm.com-1.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_172315_dl.watson-orchestrate.ibm.com-1.jpeg" /></a></p>
 </li>
 <li>
 <p><strong>Microsoft Outlook</strong> をクリックすると、Outlook と連携して利用できるすべてのスキルが表示されます。 <strong>Send an email</strong> を探し <strong>Add Skill</strong> をクリックします。<br />
 <a class="glightbox" href="../lab2_images/image-39.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-39.png" /></a></p>
 </li>
 <li>
-<p>これで、スキルフローが作成されました。全体像は以下のようになります。☆
- <a class="glightbox" href="../lab2_images/image-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-40.png" /></a></p>
+<p>これで、スキルフローが作成されました。全体像は以下のようになります。
+ <a class="glightbox" href="../lab2_images/image-77.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-77.png" /></a></p>
 </li>
 <li>
-<p>生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、<strong>YourName-generate content</strong> をクリックします。☆
- <a class="glightbox" href="../lab2_images/image-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-41.png" /></a>
- Inputのパラメーターを確認してください。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。 ここでは <strong>generated_text</strong> の形式で出力されるものが 1 つだけあります。</p>
+<p>生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、<strong>YourName-generate content</strong> をクリックします。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_172827_dl.watson-orchestrate.ibm.com-1.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_172827_dl.watson-orchestrate.ibm.com-1.jpeg" /></a>
+ Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。次に、Output のタブを開きます。ここでは <strong>text</strong> の形式で出力されるものが 1 つだけあります。</p>
 </li>
 <li>
 <p>次に、<strong>Send an email</strong> をクリックしてinput と Output のパラメーターを確認します。<br />
-<a class="glightbox" href="../lab2_images/image-42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-42.png" /></a>
- <strong>Input</strong> タブをクリックしてください。<strong>body.Content</strong> の欄をクリックすると、<strong>Available Mappings</strong>の中に <strong>YourName-generate text</strong> スキルの出力が表示されます。<strong>YourName-generate text"</strong> をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、<strong>generated_text</strong> を選択します。☆
- <a class="glightbox" href="../lab2_images/image-43.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-43.png" /></a><br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_174533_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_174533_dl.watson-orchestrate.ibm.com.jpeg" /></a>
+ <strong>Input</strong> タブをクリックします。<strong>body.Content</strong> の欄をクリックすると、<strong>Available Mappings</strong>の中に <strong>YourName-generate content</strong> スキルの出力が表示されます。<strong>YourName-generate content"</strong> をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、<strong>text</strong> を選択します。☆
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_175139_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_175139_dl.watson-orchestrate.ibm.com.jpeg" /></a><br />
 <strong>注意:</strong> 必ず<strong>ご自身の名前</strong>が入ったスキルを選択してください。</p>
 </li>
 <li>
-<p>追加で制御できるオプションは他にもあります。例：エンドユーザーから見えないようにInput欄を非表示にする、など。</p>
+<p>他にも、追加で制御できるオプションがあります。(例：エンドユーザーから見えないようにInput欄を非表示にする、など)</p>
 </li>
 <li>
-<p><strong>Actions</strong> -&gt; <strong>Save</strong> をクリックして、スキルフローを保存します。 以下のように正常に保存されたことが表示されたら、<strong>Close</strong> をクリックして編集画面を閉じます。<br />
+<p><strong>Actions</strong> -&gt; <strong>Save as draft</strong> (2回目以降は <strong>Save</strong>) をクリックして、スキルフローを保存します。 以下のように正常に保存されたことが表示されたら、<strong>Close</strong> をクリックして編集画面を閉じます。<br />
 <a class="glightbox" href="../lab2_images/image-44.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-44.png" /></a></p>
 </li>
 <li>
-<p>ご自身の名前を用いてスキルを検索します。（自身の名前をスキル名に追加する利点の1つです）
- <a class="glightbox" href="../lab2_images/image-45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-45.png" /></a></p>
+<p>ご自身の名前を用いてスキルを検索します。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_183743_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_183743_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>次以降のステップのために、<strong>Enhance this skill</strong> を選択します。
- <a class="glightbox" href="../lab2_images/image-46.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-46.png" /></a></p>
+<p><strong>Enhance this skill</strong> を選択します。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_183955_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_183955_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p>watsonx Orchestrate がスキルを認識できるように、スキルを呼び出すフレーズを登録してトレーニングする必要があります。<br />
 <strong>Phrases</strong> タブをクリックし、空の欄に <strong>Generate content and send email to YourName</strong> (<strong>YourName</strong> はご自身の名前に変更してください。例: TaroYamada) を入力し、Enter を押します。（<strong>必ず Enter を押す必要があります</strong>）<br />
  任意でさらにフレーズを追加し、<strong>Publish</strong> ボタンをクリックします。
- <a class="glightbox" href="../lab2_images/image-47.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-47.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_184711_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_184711_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>スキルフローを公開すると、スキルが正常に公開されたというメッセージが表示されます。★
- <a class="glightbox" href="../lab2_images/image-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-48.png" /></a></p>
+<p>スキルフローを公開すると、スキルが正常に公開されたというメッセージが表示されます。<br />
+<a class="glightbox" href="../lab2_images/image-78.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-78.png" /></a>  </p>
 </li>
 <li>
 <p>以上でこのステップは完了です。</p>
@@ -756,15 +755,12 @@ Outlook に接続してメールを送信できるようにするには資格情
 <p><strong>Menu</strong> -&gt; <strong>Skills Catalog</strong> に移動します。</p>
 </li>
 <li>
-<p>先ほど作成したスキルフローはカタログから見られるようになります。自身のスキルセットに追加するため、<strong>Add skill from the catalog</strong> をクリックします。</p>
-</li>
-<li>
-<p>検索欄にご自身の名前を入力します。
- <a class="glightbox" href="../lab2_images/image-49.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-49.png" /></a></p>
+<p>先ほど作成したスキルフローが、スキルカタログから見られるようになります。検索欄にご自身の名前を入力します。
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_185344_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_185344_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p><strong>Skill flows</strong> をクリックすると、作成したスキルフローが表示されます。<br />
-<a class="glightbox" href="../lab2_images/image-50.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-50.png" /></a><br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_185541_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_185541_dl.watson-orchestrate.ibm.com.jpeg" /></a> 
 <strong>注釈:</strong> 複数のスキルが表示される場合は、ご自身の名前のスキルを選択してください。（必要に応じて検索機能を使ってください）</p>
 </li>
 <li>
@@ -779,17 +775,17 @@ Outlook に接続してメールを送信できるようにするには資格情
 </li>
 <li>
 <p>スキルを Enhance する際に設定したフレーズの一部を入力します。例：<strong>generate content</strong>
-<a class="glightbox" href="../lab2_images/image-52.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-52.png" /></a><br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_19225_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_19225_dl.watson-orchestrate.ibm.com.jpeg" /></a><br />
 表示された候補から、適切な文章を選択します。もし選択した文章と複数のスキルが合致していたら、watsonx Orchestrate はそれらのスキルを候補として提示します。</p>
 </li>
 </ol>
 </li>
 <li>
-<p>最初はウェルカムメッセージを生成します。そのために、 <strong>input</strong> に適切な文章を入力します。
- <a class="glightbox" href="../lab2_images/image-53.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-53.png" /></a></p>
+<p>最初は新入社員を歓迎するメール文面を生成します。そのために、 <strong>input</strong> に適切な文章を入力します。(例: create welcome email to new hires)
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_19749_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_19749_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p><strong>Apply</strong> ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルのコンテンツの欄にコピーします。宛先にご自身のメールアドレスを入力し、<strong>Apply</strong> ボタンをクリックします。
+<p><strong>Apply</strong> ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルの Content の欄にコピーします。宛先にご自身のメールアドレスを入力し、<strong>Apply</strong> ボタンをクリックします。
  <a class="glightbox" href="../lab2_images/image-54.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-54.png" /></a></p>
 </li>
 <li>
