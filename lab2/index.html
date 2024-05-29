@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.732c4fb1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -309,7 +309,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      新入社員向けの歓迎メールを生成して、スキルをテストしてみよう
+      新年度のご挨拶メールを生成して、スキルをテストしてみよう
     </span>
   </a>
   
@@ -510,14 +510,14 @@
 </li>
 <li>
 <p><strong>Input</strong>タブをクリックします。required (必須) の欄とそうでない欄があることが確認できます。この画面は、インポートしたスキルを実行する際の入力項目を表しています。<br />
- 必須になっている項目の <strong>Edit response</strong> をクリックし、テキストを入力してみましょう。例：<code>create welcome email to new hires</code>（スキルの実行時に例文として表示されます。）<br />
-<a class="glightbox" href="../lab2_images/image-70.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-70.png" /></a></p>
+ 必須になっている項目の <strong>Edit response</strong> をクリックし、テキストを入力してみましょう。例：<code>新入社員を歓迎するメールを作成してください。</code>（スキルの実行時に例文として表示されます。）<br />
+<a class="glightbox" href="../lab2_images/image-80.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-80.png" /></a></p>
 </li>
 <li>
 <p>他のタブも同様に動作を確認できます。</p>
 <ul>
 <li><strong>Output</strong>タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。</li>
-<li><strong>Security</strong>タブは、スキルを実行するために必要な認証情報を設定できます。</li>
+<li><strong>Security</strong>タブは、スキルを実行するために必要な認証情報を確認できます。</li>
 <li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。</li>
 </ul>
 </li>
@@ -543,7 +543,7 @@
 <p><strong>オプション:</strong> 先ほど公開したスキルをカタログから探して、ステータスを確認してみましょう。ステータスはどのようになっているでしょうか？</p>
 </li>
 </ol>
-<h2 id="_3">新入社員向けの歓迎メールを生成して、スキルをテストしてみよう</h2>
+<h2 id="_3">新年度のご挨拶メールを生成して、スキルをテストしてみよう</h2>
 <p>このセクションでは、インポートしたスキルをテストする方法について説明します。 スキルをテストするには、カタログからスキルを追加して実行する必要があります。 このための手順は、以下のとおりです。</p>
 <ol>
 <li>
@@ -567,7 +567,7 @@
 <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>コピーした<strong>API キー</strong>を貼り付け、APIキーの冒頭に <strong>Bearer + 半角スペース</strong> を追加します。<strong>Connect app</strong> ボタンをクリックします。 指定された<strong>API キー</strong>が有効な場合は、画面に正常な通知が表示されます。
+<p>コピーした<strong>API キー</strong>を貼り付け、APIキーの冒頭に <strong>Bearer + 半角スペース</strong> を追加します。<strong>Connect app</strong> ボタンをクリックします。 指<strong>API キー</strong>が接続されると、<strong>Connected</strong> と表示されます。
  <a class="glightbox" href="../lab2_images/image-73.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-73.png" /></a></p>
 </li>
 <li>
@@ -583,17 +583,18 @@
 <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164033_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164033_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>スキルをテストするには、該当のスキルをクリックします。 </p>
+<p>スキルをテストするには、先ほどフレーズとして登録した <strong>generate content</strong> をチャット欄に入力します。（該当のスキルをクリックしても実行できます）<br />
+<a class="glightbox" href="../lab2_images/image-79.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-79.png" /></a></p>
 </li>
 <li>
 <p>前のステップで説明したように、input は必須項目になっているため、必ず入力する必要があります。<br />
- input の欄に、<code>create welcome email to new hires</code>と入力します。<strong>Show all fields</strong> は、その他のパラメータを確認し、設定することができます。<br />
+ input の欄に、<code>取引先のお客様に対する、新年度のご挨拶メールを作成してください。</code>と入力します。<strong>Show all fields</strong> は、その他のパラメータを確認し、設定することができます。<br />
  入力が完了したら、<strong>Apply</strong> をクリックします。<br />
-<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164826_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_164826_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_121827_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_121827_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>スキルが実行されると、進行状況が表示され、<code>working on it</code> というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。
- <a class="glightbox" href="../lab2_images/image-75.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-75.png" /></a></p>
+<p>スキルが実行されると、進行状況が表示され、<code>working on it</code> というメッセージが表示されます。 最後に、新年度のご挨拶メールのコンテンツが生成されます。<br />
+<a class="glightbox" href="../lab2_images/image-81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-81.png" /></a>  </p>
 </li>
 <li>
 <p>以上で、メールのコンテンツを生成するテストは完了です。</p>
@@ -602,7 +603,7 @@
 <h2 id="outlook">カタログからスキルを追加し、Outlookでメールを送ろう</h2>
 <p>Outlook でメールを送信するスキルは、プリビルドスキルとして既に watsonx Orchestrate にインポートされています。<br />
 このスキルを追加し、Microsoft Outlook に接続してテストする必要があります。<br />
-Outlook に接続してメールを送信できるようにするには資格情報が必要になります。差出人として、自身のメールアドレスと資格情報を使用することはできません。</p>
+Outlook に接続してメールを送信できるようにするには資格情報が必要になります。今回の環境では、差出人として、自身のメールアドレスと資格情報を使用することはできません。</p>
 <ol>
 <li>
 <p><strong>Chat</strong> に移動し <strong>Add skills from the catalog</strong> をクリックするか、左上のメニューに移動して <strong>Skills catalog</strong> を選択します。
@@ -639,7 +640,7 @@ Outlook に接続してメールを送信できるようにするには資格情
  <a class="glightbox" href="../lab2_images/image-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-29.png" /></a></p>
 </li>
 <li>
-<p><strong>Type</strong> はデフォルト値の <strong>Non-admin user</strong> を使用し、<strong>Connect app</strong> ボタンをクリックします。 これにより、Outlookに移動します。 講師から提供される資格情報を使用します。 (IBM のメールアドレスを使用して Outlook に接続することはできません) <br />
+<p><strong>Type</strong> はデフォルト値の <strong>Non-admin user</strong> を使用し、<strong>Connect app</strong> ボタンをクリックします。 これにより、Outlookに移動します。 講師から提供される資格情報を使用します。 (今回の環境では、IBM のメールアドレスを使用して Outlook に接続することはできません) <br />
 <a class="glightbox" href="../lab2_images/image-28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-28.png" /></a>  </p>
 </li>
 <li>
@@ -692,8 +693,8 @@ Outlook に接続してメールを送信できるようにするには資格情
  <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
-<p>このスキルがフローに追加されます。
- <a class="glightbox" href="../lab2_images/image-76.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-76.png" /></a></p>
+<p>このスキルがフローに追加されます。<br />
+<a class="glightbox" href="../lab2_images/image-76.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-76.png" /></a></p>
 </li>
 <li>
 <p>追加したスキルの後にある <strong>+</strong> をクリックします。 <strong>Send email</strong> を検索します。
@@ -781,12 +782,14 @@ Outlook に接続してメールを送信できるようにするには資格情
 </ol>
 </li>
 <li>
-<p>最初は新入社員を歓迎するメール文面を生成します。そのために、 <strong>input</strong> に適切な文章を入力します。(例: create welcome email to new hires)
- <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_19749_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_19749_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
+<p>最初は新年度のご挨拶メール文面を生成します。そのために、 <strong>input</strong> に適切な文章を入力します。(例: 取引先のお客様に対する、新年度のご挨拶メールを作成してください。)
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_122427_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_122427_dl.watson-orchestrate.ibm.com.jpeg" /></a></p>
 </li>
 <li>
 <p><strong>Apply</strong> ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルの Content の欄にコピーします。宛先にご自身のメールアドレスを入力し、<strong>Apply</strong> ボタンをクリックします。
- <a class="glightbox" href="../lab2_images/image-54.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-54.png" /></a></p>
+ <a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_12277_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_12277_dl.watson-orchestrate.ibm.com.jpeg" /></a><br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_12295_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_12295_dl.watson-orchestrate.ibm.com.jpeg" /></a><br />
+<a class="glightbox" href="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_122959_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_29-5-2024_122959_dl.watson-orchestrate.ibm.com.jpeg" /></a>  </p>
 </li>
 <li>
 <p>メールが送信されたというメッセージが表示されます。<br />
@@ -844,7 +847,7 @@ Outlook に接続してメールを送信できるようにするには資格情
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "navigation.sections", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
