@@ -520,7 +520,7 @@ Outlook に接続してメールを送信できるようにするには資格情
 </li>
 </ol>
 <h2 id="2">2つのスキルを組み合わせてスキルフローを作成しよう</h2>
-<p>これまでは、個々のスキルのインポート、追加、テストを行いました。watsonx Orchestrate では、個々のスキルだけでなく、2つ以上のスキルを組み合わせて、スキルフローを作成することができます。 手順は以下のとおりです。</p>
+<p>これまでは、個々のスキルを作成、追加、テストを行いました。watsonx Orchestrate では、個々のスキルだけでなく、2つ以上のスキルを組み合わせて、スキルフローを作成することができます。 手順は以下のとおりです。</p>
 <ol>
 <li>
 <p><strong>Menu</strong> -&gt; <strong>Build</strong> -&gt; <strong>Skills</strong> に移動します。</p>
@@ -571,21 +571,19 @@ Outlook に接続してメールを送信できるようにするには資格情
 <li>
 <p>次に、<strong>Send an email</strong> をクリックしてinput と Output のパラメーターを確認します。  </p>
 <ul>
-<li>
-<p><strong>パタ―ン１：自分でパラメーターの設定を行う</strong><br />
+<li><strong>パタ―ン１：自分でパラメーターの設定を行う</strong><br />
    Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。
    <a class="glightbox" href="../SkillFlow1%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231439.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkillFlow1%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231439.png" /></a>
    <a class="glightbox" href="../SkillFlow2%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231617.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkillFlow2%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231617.png" /></a>
    <a class="glightbox" href="../SkiiFlow3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231657.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkiiFlow3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231657.png" /></a>
-   <a class="glightbox" href="../SkillFlow4%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231749.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkillFlow4%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231749.png" /></a>
-<strong>Input</strong> タブをクリックします。<strong>body.Content</strong> の欄をクリックすると、<strong>Available Mappings</strong>の中に <strong>YourName-Recommendation</strong> スキルの出力が表示されます。<strong>YourName-Recommendation</strong> をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、<strong>generated_text</strong> を選択します。</p>
-</li>
-<li>
-<p><strong>パタ―ン2：自動でマッピング機能を使用する</strong>
-<code>Generate mapping suggestions</code>をクリックすると、手動で設定したパラメーターと同じ<code>generated_text</code>が選択されます。
-<a class="glightbox" href="../SkillFlow_GenMap%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231824.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkillFlow_GenMap%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231824.png" /></a></p>
-</li>
+   <a class="glightbox" href="../SkillFlow4%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231749.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkillFlow4%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231749.png" /></a></li>
 </ul>
+<p><strong>Input</strong> タブをクリックします。<strong>body.Content</strong> の欄をクリックすると、<strong>Available Mappings</strong>の中に <strong>YourName-Recommendation</strong> スキルの出力が表示されます。<strong>YourName-Recommendation</strong> をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、<strong>generated_text</strong> を選択します。</p>
+<ul>
+<li><strong>パタ―ン2：自動でマッピング機能を使用する</strong></li>
+</ul>
+<p><code>Generate mapping suggestions</code>をクリックすると、手動で設定したパラメーターと同じ<code>generated_text</code>が選択されます。
+<a class="glightbox" href="../SkillFlow_GenMap%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231824.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../SkillFlow_GenMap%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20231824.png" /></a></p>
 </li>
 </ol>
 <p><strong>注意:</strong> 必ず<strong>ご自身の名前</strong>が入ったスキルを選択してください。</p>
@@ -670,9 +668,8 @@ Outlook に接続してメールを送信できるようにするには資格情
 </li>
 </ol>
 <h2 id="_4">お疲れさまでした！</h2>
-<p>以上で Lab2 は完了です。このラボでは、OpenAPI でスキルをインポートし、スキルを公開してテストを行いました。<br />
-次に、プリビルドスキルを自身のスキルセットに追加し、テストを行いました。<br />
-最後に、それら2つのスキルを組み合わせ、1 つ目のスキルの出力を 2 つ目のスキルの入力にマッピングして、スキルフローを作成しました。</p>
+<p>以上で Lab2 は完了です。このラボでは、 プリビルドスキルを自身のスキルセットに追加し、テストを行いました。  </p>
+<p>最後に、それら2つのスキルを組み合わせ、1 つ目のスキルの出力を 2 つ目のスキルの入力にマッピングして、スキルフローを作成しました。</p>
 
 
 
