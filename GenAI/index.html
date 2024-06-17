@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#automation-builder-ai" class="md-skip">
+        <a href="#genai-automation-builder" class="md-skip">
           Skip to content
         </a>
       
@@ -445,8 +445,8 @@
                   
 
 
-<h1 id="automation-builder-ai">Automation builder (生成AI)</h1>
-<p>watsonx Orchestrate では、Lab2 で行ったように生成AIをカスタムスキルとして外部から呼び出すことが可能ですが、Automation Builder では生成AIのプロンプトを作成し、スキルとして公開できます。
+<h1 id="genai-automation-builder">GenAI (Automation builder)</h1>
+<p>watsonx Orchestrate では、生成AIをカスタムスキルとして外部から呼び出すことが可能ですが、Automation Builder では生成AIのプロンプトを作成し、スキルとして使用することができます。
 このLabでは、顧客の特性に応じてメールを生成するプロンプトを作成します。</p>
 <h2 id="_1">前提条件</h2>
 <ol>
@@ -652,8 +652,57 @@
  <a class="glightbox" href="../GenAI_images/image-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/image-20.png" /></a>
  13. 正常に公開されると、以下のように <strong>Published</strong> と表示されます。
  <a class="glightbox" href="../GenAI_images/image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/image-21.png" /></a>
- 14. 左上のメニュー (≣) から <strong>Skills and apps</strong> に戻ります。<strong>Skills</strong> のタブを選択すると、公開した生成AIのスキルが <strong>Ready to Publish</strong> の状態で表示されます。これまでのLabで行ったように、<strong>Enhance this skill</strong>をクリックして Enhance すると、スキルを利用できるようになります。
- <a class="glightbox" href="../GenAI_images/image-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/image-22.png" /></a></p>
+ 14. 左上のメニュー (≣) から <strong>Skills and apps</strong> に戻ります。<strong>Skills</strong> のタブを選択する、あるいはSkills and appsのページで、作成したスキルを検索します (例:TaroYamada-Recommendation)。
+ 公開した生成AIのスキルが <strong>Ready to Publish</strong> の状態で表示されます。
+ スキルを公開するために、右端の ⁝ から<strong>Enhance this skill</strong>を選択します。
+ <a class="glightbox" href="../lab2_images/image-61.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-61.png" /></a></p>
+<ol>
+<li>
+<p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています。 (先ほど、jsonファイルで変更した部分です)
+ <a class="glightbox" href="../%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20223308.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20223308.png" /></a></p>
+</li>
+<li>
+<p><strong>Input</strong>タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  表示項目を日本語にしてみましょう。</p>
+</li>
+</ol>
+<p><a class="glightbox" href="../ASRecommnendation_input%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20233250.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../ASRecommnendation_input%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20233250.png" /></a></p>
+<ol>
+<li>他のタブも同様に動作を確認できます。<ul>
+<li><strong>Output</strong>タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。</li>
+<li><strong>Security</strong>タブは、スキルを実行するために必要な認証情報を確認できます。</li>
+<li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。</li>
+</ul>
+</li>
+<li>
+<p><strong>Phrases</strong>タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。日本語で例文を追加します。</p>
+</li>
+<li>
+<p><code>観光地のお勧め文を作成して</code></p>
+</li>
+<li><code>おすすめ観光スポット</code></li>
+<li><code>お勧め観光地</code></li>
+</ol>
+<p>の3つを追加文を入力し<strong>Enter(return)</strong> を押します。  </p>
+<blockquote>
+<p>[!WARNING]
+フレーズを入力するには<strong>Enter(return)</strong> を押さなければなりません。  </p>
+</blockquote>
+<p><a class="glightbox" href="../%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20223354.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-06-17%20223354.png" /></a></p>
+<p>フレーズを自由に追加することも可能です。また、<strong>Auto-generate phrases</strong> をクリックすると、生成AIが自動でフレーズを生成してくれます。<br />
+ 最後に、<strong>Publish</strong>を押します。
+ <a class="glightbox" href="../image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-2.png" /></a></p>
+<ol>
+<li>
+<p>スキルが公開（publish）できたというメッセージが表示されます。<br />
+<a class="glightbox" href="../lab2_images/image-65.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab2_images/image-65.png" /></a></p>
+</li>
+<li>
+<p>スキルが正常に公開されました。</p>
+</li>
+<li>
+<p><strong>オプション:</strong> 先ほど公開したスキルをカタログから探して、ステータスを確認してみましょう。ステータスはどのようになっているでしょうか？</p>
+</li>
+</ol>
 <h2 id="_3">お疲れさまでした！</h2>
 <p>このLabでは、Automation builder を用いて生成AIのプロンプトを作成しました。
 Context や Prompt input を記入したり、変数を設定したりして、出力を生成しました。
