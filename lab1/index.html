@@ -459,13 +459,13 @@
 <li>watsonx Orchestrateにログインします。</li>
 <li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
 <li>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。<br />
-    今回使用するテナントは<strong>AIT-wxo</strong>です。</li>
+    今回使用するテナントは<strong>wxo-Workshop</strong>です。</li>
 </ol>
 <p><a class="glightbox" href="../lab1_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image.png" /></a></p>
 <ol>
 <li>
 <p>以下のような画面が表示されます。（ツアーのダイアログが表示された場合にはスキップしてください。）<br />
-<a class="glightbox" href="../lab1_images/image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-5.png" /></a></p>
+<a class="glightbox" href="../image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-17.png" /></a></p>
 </li>
 <li>
 <p>詳細は以下の通りです。</p>
@@ -473,17 +473,15 @@
 各画面へ遷移するためのメニューが表示されます。    </p>
 <p>2.チャット画面<br />
 watsonx Orchestrateへ様々な処理を依頼するためのチャット画面    </p>
-<p>3.スキル編集画面<br />
-スキルの追加やスキルフローの作成を行います。  </p>
-<p>4.AI assistant builder<br />
+<p>3.AI assistant builder 
 外部のWebサイトなどに組みこんだり、Slackなどのチャネルと統合可能なAIアシスタントの構成が可能です。  </p>
-<p>5.Automations<br />
-意思決定、ワークフロー、生成AIに関する処理をローコードで実装し、スキルとして公開が可能です。  </p>
-<p>6.ヘルプ<br />
+<p>4.Skill studio 
+スキルの追加やスキルフローの作成、意思決定、ワークフロー、生成AIに関する処理をローコードで実装し、スキル(Automations)として公開が可能です。  </p>
+<p>5.ヘルプ<br />
 各種ヘルプへのリンクが表示されます。複数アカウントに所属する場合には、Swtich Accountからアカウントの切り替えが可能です。  </p>
-<p>7.タスク・リスト<br />
+<p>6.タスク・リスト<br />
 ワークフローを使用している場合に、自分に割り当てられたタスクが表示されます。  </p>
-<p>8.プロファイル/設定<br />
+<p>7.プロファイル/設定<br />
 ユーザーのプロファイル設定が可能です。</p>
 </li>
 <li>
@@ -535,15 +533,15 @@ paths:
 </code></pre></div></p>
 </li>
 <li>
-<p>今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値のYourInitialsの部分をあなたのイニシャルに置き換えてファイルを保存してください。更新後のファイルは以下のようになるはずです。
+<p>今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値のYourInitialsの部分をあなたのイニシャルに置き換えてファイルを保存してください。更新後のファイルは以下のようになるはずです。(イニシャルの置き換え箇所は、4か所あります。)
 <div class="highlight"><pre><span></span><code>openapi: 3.0.3
 info:
-  title: SH-helloworld-watsonx
-  description: SH Hello world WatsonX
+  title: AS-helloworld-watsonx
+  description: AS Hello world WatsonX
   version: 1.0.0
   x-ibm-annotations: true
   x-ibm-application-name: IBM Watsonx - Training
-  x-ibm-application-id: watsonxai-SH-training
+  x-ibm-application-id: watsonxai-AS-training
   x-ibm-skill-type: imported
   x-ibm-application-icon: &lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; 
 servers:
@@ -553,66 +551,66 @@ security:
 paths:
   /hellowatsonx:
     post:
-      summary: SH Hello World WatsonX
+      summary: AS Hello World WatsonX
       operationId: Hello-SH-watsonx
 </code></pre></div></p>
 </li>
 <li>
-<p>メニューからSkills and appsを選択します。<br />
-<a class="glightbox" href="../lab1_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-8.png" /></a></p>
+<p>メニューからSkill studio を選択します。<br />
+<a class="glightbox" href="../image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-18.png" /></a></p>
 </li>
 <li>
-<p>Add Skillsボタンをクリックします。<br />
-<a class="glightbox" href="../lab1_images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-9.png" /></a></p>
+<p>右上にあるCreate skillボタンをクリック、Import APIをクリックします。<br />
+<a class="glightbox" href="../image-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-19.png" /></a></p>
 </li>
 <li>
 <p>From a fileを選択してください。<br />
-<a class="glightbox" href="../lab1_images/image-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-11.png" /></a></p>
+<a class="glightbox" href="../image-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-20.png" /></a></p>
 </li>
 <li>
 <p>先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。</p>
 </li>
 <li>
 <p>ファイルの検証が実施され、問題無ければ以下の様に表示されます。<br />
-<a class="glightbox" href="../lab1_images/image-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-12.png" /></a></p>
+<a class="glightbox" href="../image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-21.png" /></a></p>
 </li>
 <li>
 <p>右下のNextをクリックしてください。追加するAPIの内容が表示されます。</p>
 </li>
 <li>
 <p>Hello World WatsonXのチェックボックスをチェックし、右下のAddボタンをクリックしてください。<br />
-<a class="glightbox" href="../lab1_images/image-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-13.png" /></a></p>
+<a class="glightbox" href="../image-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-22.png" /></a></p>
 </li>
 <li>
 <p>スキル一覧にインポートしたスキルが表示されるので、右側のメニューを展開し、<strong>Enhance this skill</strong>を選択してください。<br />
-<a class="glightbox" href="../lab1_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-14.png" /></a></p>
+<a class="glightbox" href="../image-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-23.png" /></a></p>
 </li>
 <li>
 <p>スキルの詳細が表示されます。スキルのEnhance画面から、スキルの入出力の表示、スキルを呼び出すためのフレーズ、watsonx Orchestrateが次に実行するスキルの提案を行うNext Best Skillsの設定などを行うことが可能です。<br />
-<a class="glightbox" href="../lab1_images/image-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-15.png" /></a></p>
+<a class="glightbox" href="../image-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-24.png" /></a></p>
 </li>
 <li>
 <p><strong>Input</strong>タブをクリックしてください。Inputタブでは、スキルの入力について確認することができます。スキルの入力パラメータに<strong>name</strong>があり、必須のパラメータで無いことが分かります。<br />
-<a class="glightbox" href="../lab1_images/image-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-16.png" /></a></p>
+<a class="glightbox" href="../image-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-25.png" /></a></p>
 </li>
 <li>
 <p><strong>Output</strong>タブをクリックしてください。Outputタブでは、スキルの出力について確認することが可能です。スキルの出力パラメータとして<strong>greeting</strong>が定義されていることが分かります。<br />
-<a class="glightbox" href="../lab1_images/image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-18.png" /></a></p>
+<a class="glightbox" href="../image-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-26.png" /></a></p>
 </li>
 <li>
 <p><strong>Security</strong>タブをクリックしてください。Securityタブでは、認証情報や、URLを確認することができます。また、接続のテストを行うことができます。<br />
-<a class="glightbox" href="../lab1_images/image-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-19.png" /></a></p>
+<a class="glightbox" href="../image-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-27.png" /></a></p>
 </li>
 <li>
 <p>接続のテストを実行してみましょう。Usernameに test@acme.com、Passwordにtestを入力します。今回使用するAPIについては認証不要のため、どんな値を入力しても問題ありません。</p>
 </li>
 <li>
 <p>Submitボタンをクリックし、Authentication Successfulと表示されることを確認します。<br />
-<a class="glightbox" href="../lab1_images/image-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-20.png" /></a></p>
+<a class="glightbox" href="../image-28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-28.png" /></a></p>
 </li>
 <li>
 <p><strong>Phrases</strong>タブをクリックしてください。Phrasesタブでは、スキルを呼び出す際に使用するフレーズを登録します。ユーザーがここに登録した例文にマッチした文章をチャットから入力することでこのスキルが呼び出されます。複数のスキルがマッチした場合にはwatsonx Orchestrateは実行するスキルを確認してきます。既にフレーズが登録済みのはずですが、いくつかのフレーズを追加してみてください。また、入力フィールドにカーソルを移動させると表示される、<strong>Auto-generate phrases</strong>ボタンをクリックすることで生成AIを用いてフレーズのサンプルを自動生成することも可能です。<br />
-<a class="glightbox" href="../lab1_images/image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-21.png" /></a></p>
+<a class="glightbox" href="../image-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-29.png" /></a></p>
 </li>
 <li>
 <p><strong>Next best skills</strong>タブをクリックしてください。このタブでは、スキルを実行した後に次に実行すべきスキルの選択肢として表示される複数のスキルを定義することが可能です。</p>
@@ -620,7 +618,7 @@ paths:
 <li>Next best skillsは10個まで登録することが可能です。</li>
 <li>
 <p>Next best skillsに追加した各スキルに対して明示的に変数のマッピングを行うことが可能です。<br />
-<a class="glightbox" href="../lab1_images/image-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-23.png" /></a></p>
+<a class="glightbox" href="../image-30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-30.png" /></a></p>
 </li>
 <li>
 <p><strong>Publish</strong>ボタンをクリックして、スキルをPublishしてください。<br />
@@ -632,23 +630,28 @@ paths:
 <ol>
 <li>
 <p>左上のメニューから<strong>Chat</strong>を選択してチャット画面を表示します。<br />
-<a class="glightbox" href="../lab1_images/image-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-25.png" /></a></p>
+<a class="glightbox" href="../image-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-31.png" /></a></p>
 </li>
 <li>
-<p>以下のような画面が表示されるはずです。<br />
-<a class="glightbox" href="../lab1_images/image-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-26.png" /></a></p>
+<p>以下のような画面が表示されるはずです。左下のAdd skills from the catalogをクリックします。<br />
+<a class="glightbox" href="../image-32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-32.png" /></a></p>
 </li>
 <li>
-<p>左下のAdd skills from the catalogをクリックします。検索フォームに先ほど作成したスキルの名前を入力してください。<br />
-<a class="glightbox" href="../lab1_images/image-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-27.png" /></a></p>
+<p>検索フォームに先ほど作成したスキルの名前(hello world)を入力してください。<br />
+<a class="glightbox" href="../image-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-33.png" /></a></p>
 </li>
 <li>
 <p>スキルを選択して、add skillをクリックしてスキルを追加します。<br />
-<a class="glightbox" href="../lab1_images/image-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-29.png" /></a></p>
+<a class="glightbox" href="../image-34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-34.png" /></a></p>
 </li>
 <li>
-<p>右上の<strong>Connect App</strong>をクリックしてアプリケーションと接続します。username,passwordに任意の値を入力し、Connect appボタンをクリックします。<br />
-<a class="glightbox" href="../lab1_images/image-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-31.png" /></a></p>
+<p>右上の<strong>Connect App</strong>をクリックしてアプリケーションと接続します。
+<a class="glightbox" href="../image-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-35.png" /></a></p>
+</li>
+<li>
+<p>username,passwordに任意の値を入力し、Connect appボタンをクリックします。<br />
+今回は、username は<strong>test@acme.com</strong>、passwordは<strong>test</strong>となります。
+<a class="glightbox" href="../image-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-36.png" /></a></p>
 </li>
 <li>
 <p>アプリケーションとの接続が完了しました！</p>
@@ -659,7 +662,7 @@ paths:
 </li>
 <li>
 <p>メニューからチャット画面に戻ります。スキルが追加されていることが分かります。<br />
-<a class="glightbox" href="../lab1_images/image-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-33.png" /></a></p>
+<a class="glightbox" href="../image-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-37.png" /></a></p>
 </li>
 </ol>
 <h2 id="_3">スキルの動作確認</h2>
@@ -673,17 +676,18 @@ paths:
 </li>
 <li>
 <p>先ほど追加したスキルが呼び出され、入力フォームが表示されます。<br />
-<a class="glightbox" href="../lab1_images/image-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-35.png" /></a></p>
+<a class="glightbox" href="../image-38.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-38.png" /></a></p>
 </li>
 <li>
-<p>自分の名前を入力し、<strong>Apply</strong>ボタンをクリックしてください。結果が表示されるはずです。<br />
-<a class="glightbox" href="../lab1_images/image-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-36.png" /></a></p>
+<p>自分の名前を入力し、<strong>Apply</strong>ボタンをクリックしてください。 
+<a class="glightbox" href="../image-39.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-39.png" /></a> </p>
 </li>
-<li>
-<p>チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。<br />
-<a class="glightbox" href="../lab1_images/image-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-37.png" /></a><br />
-<a class="glightbox" href="../lab1_images/image-38.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image-38.png" /></a></p>
-</li>
+</ol>
+<p>結果が表示されるはずです。
+<a class="glightbox" href="../image-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-40.png" /></a></p>
+<ol>
+<li>チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。<br />
+<a class="glightbox" href="../image-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-41.png" /></a></li>
 </ol>
 <h2 id="_4">お疲れさまでした！</h2>
 <p>このハンズオンでは、watsonx Orchestrateにログインし、カスタムスキルを追加、EnhanceしてからPublishし、カタログに追加しました。そしてカタログからスキルを追加し、チャット画面から呼び出しました。　</p>
