@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#genai-automation-builder" class="md-skip">
+        <a href="#lab2genai-automation-builder" class="md-skip">
           Skip to content
         </a>
       
@@ -445,7 +445,7 @@
                   
 
 
-<h1 id="genai-automation-builder">GenAI (Automation builder)</h1>
+<h1 id="lab2genai-automation-builder">Lab2:GenAI (Automation builder)</h1>
 <p>watsonx Orchestrate では、生成AIをカスタムスキルとして外部から呼び出すことが可能ですが、Automation Builder では生成AIのプロンプトを作成し、スキルとして使用することができます。
 このLabでは、顧客の特性に応じてメールを生成するプロンプトを作成します。</p>
 <h2 id="_1">前提条件</h2>
@@ -454,7 +454,7 @@
 <li>IBM-idを用いてログイン可能であること。</li>
 </ol>
 <h2 id="automation-ai">Automation (生成AI) を作成してみよう</h2>
-<p>Automation builder では、まず Automation を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。</p>
+<p>Skill studioで、まず Automation を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。</p>
 <ol>
 <li>
 <p>メニュー(≣)から <strong>Skill studio</strong> を選択します。<br />
@@ -634,47 +634,73 @@
  2. <strong>Create operation</strong> をクリックします。
  <a class="glightbox" href="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_125053_dl.watson-orchestrate.ibm.com.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../GenAI_images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_28-5-2024_125053_dl.watson-orchestrate.ibm.com.jpeg" /></a><br />
  3. <strong>Operation name</strong> の欄に、<strong>YourName_Recommendation</strong> (ハイフンやスペースは使えません) と入力し、<strong>Component</strong> の欄で公開したいコンポーネントを選択します。<br />
-<a class="glightbox" href="../image-55.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-55.png" /></a> 
- 4. <strong>Save</strong> をクリックします。<br />
+<a class="glightbox" href="../image-55.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-55.png" /></a> </p>
+<ol>
+<li>
+<p><strong>Save</strong> をクリックします。<br />
  これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。<br />
-<a class="glightbox" href="../image-56.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-56.png" /></a>
- 5. <strong>Share changes</strong> をクリックします。<br />
-<a class="glightbox" href="../image-57.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-57.png" /></a>
- 6. <strong>Share</strong> をクリックします。
- <a class="glightbox" href="../image-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-58.png" /></a>
- ポップアップが出てきたら再度 <strong>Share</strong> をクリックします。
- <a class="glightbox" href="../image-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-59.png" /></a>
- 7. シェアが完了したら、<strong>Back to YourName_recommendation</strong>をクリックし、元のプロンプト・エディターの画面に戻ります。
- 8. 次に <strong>History</strong> のタブをクリックします。
- <a class="glightbox" href="../image-63.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-63.png" /></a>
- 9. 一番上の行の <strong>Version +</strong> をクリックします。
-<a class="glightbox" href="../image-64.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-64.png" /></a>
- 10. ポップアップが出てきたら、バージョンの名前の欄に <strong>1.0.0</strong> と入力して、<strong>Create</strong> をクリックします。
- <a class="glightbox" href="../image-65.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-65.png" /></a>
- 11. 1.0.0 というバージョンが作成されたので、これをスキルとして公開します。<strong>Publish</strong> というタブをクリックします。
- <a class="glightbox" href="../image-66.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-66.png" /></a>
- 12. 1.0.0 のバージョンをクリックすると、下に詳細が表示されます。<strong>Publish</strong> をクリックします。
- <a class="glightbox" href="../image-67.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-67.png" /></a>
- 確認画面が出てくるので、もう一度 <strong>Publish</strong> をクリックします。
- <a class="glightbox" href="../image-68.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-68.png" /></a>
- 13. 正常に公開されると、以下のように <strong>Published</strong> と表示されます。
- <a class="glightbox" href="../image-69.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-69.png" /></a>
- 14. 左上のメニュー (≣) から<strong>Skills studio</strong>をクリックし、 <strong>Skills and apps</strong> タブをクリックし、戻ります。<strong>Skills</strong> のタブを選択する、あるいはSkills and appsのページで、作成したスキルを検索します (例:AyamiSato-Recommendation)。
+<a class="glightbox" href="../image-56.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-56.png" /></a></p>
+</li>
+<li>
+<p><strong>Share changes</strong> をクリックします。<br />
+<a class="glightbox" href="../image-57.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-57.png" /></a></p>
+</li>
+<li>
+<p><strong>Share</strong> をクリックします。
+ <a class="glightbox" href="../image-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-58.png" /></a></p>
+</li>
+</ol>
+<p>ポップアップが出てきたら再度 <strong>Share</strong> をクリックします。
+ <a class="glightbox" href="../image-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-59.png" /></a></p>
+<ol>
+<li>
+<p>シェアが完了したら、<strong>Back to YourName_recommendation</strong>をクリックし、元のプロンプト・エディターの画面に戻ります。</p>
+</li>
+<li>
+<p>次に <strong>History</strong> のタブをクリックします。
+ <a class="glightbox" href="../image-63.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-63.png" /></a></p>
+</li>
+<li>
+<p>一番上の行の <strong>Version +</strong> をクリックします。
+<a class="glightbox" href="../image-64.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-64.png" /></a></p>
+</li>
+<li>
+<p>ポップアップが出てきたら、バージョンの名前の欄に <strong>1.0.0</strong> と入力して、<strong>Create</strong> をクリックします。
+ <a class="glightbox" href="../image-65.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-65.png" /></a></p>
+</li>
+<li>
+<p>1.0.0 というバージョンが作成されたので、これをスキルとして公開します。<strong>Publish</strong> というタブをクリックします。 
+ <a class="glightbox" href="../image-66.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-66.png" /></a></p>
+</li>
+<li>
+<p>1.0.0 のバージョンをクリックすると、下に詳細が表示されます。<strong>Publish</strong> をクリックします。
+ <a class="glightbox" href="../image-67.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-67.png" /></a></p>
+</li>
+</ol>
+<p>確認画面が出てくるので、もう一度 <strong>Publish</strong> をクリックします。
+ <a class="glightbox" href="../image-68.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-68.png" /></a></p>
+<ol>
+<li>
+<p>正常に公開されると、以下のように <strong>Published</strong> と表示されます。
+ <a class="glightbox" href="../image-69.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-69.png" /></a></p>
+</li>
+<li>
+<p>左上のメニュー (≣) から<strong>Skills studio</strong>をクリックし、 <strong>Skills and apps</strong> タブをクリックし、戻ります。<strong>Skills</strong> のタブを選択する、あるいはSkills and appsのページで、作成したスキルを検索します (例:AyamiSato-Recommendation)。
  公開した生成AIのスキルが <strong>Ready to Publish</strong> の状態で表示されます。
  スキルを公開するために、右端の ⁝ から<strong>Enhance this skill</strong>を選択します。
  !<a class="glightbox" href="../image-71.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-71.png" /></a></p>
-<ol>
+</li>
 <li>
 <p>複数のタブがある画面が表示されます。左端の<strong>Name</strong>タブはスキルの名前を表しています。 
 <a class="glightbox" href="../image-72.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-72.png" /></a></p>
 </li>
 <li>
-<p><strong>Input</strong>タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  表示項目を日本語にしてみましょう。</p>
+<p><strong>Input</strong>タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  表示項目を日本語にしてみましょう。
+ <a class="glightbox" href="../image-73.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-73.png" /></a></p>
 </li>
-</ol>
-<p><a class="glightbox" href="../image-73.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-73.png" /></a></p>
-<ol>
-<li>他のタブも同様に動作を確認できます。<ul>
+<li>
+<p>他のタブも同様に動作を確認できます。</p>
+<ul>
 <li><strong>Output</strong>タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。</li>
 <li><strong>Security</strong>タブは、スキルを実行するために必要な認証情報を確認できます。</li>
 <li><strong>Next Best Skill</strong>タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。</li>
@@ -695,8 +721,7 @@
 フレーズを入力するには<strong>Enter(return)</strong> を押さなければなりません。  </p>
 </blockquote>
 <p><a class="glightbox" href="../image-74.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-74.png" /></a></p>
-<p>フレーズを自由に追加することも可能です。また、<strong>Auto-generate phrases</strong> をクリックすると、生成AIが自動でフレーズを生成してくれます。<br />
- 最後に、<strong>Publish</strong>を押します。
+<p>フレーズを自由に追加することも可能です。また、<strong>Auto-generate phrases</strong> をクリックすると、生成AIが自動でフレーズを生成してくれます。  最後に、<strong>Publish</strong>を押します。
 <a class="glightbox" href="../image-75.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-75.png" /></a></p>
 <ol>
 <li>
@@ -714,8 +739,7 @@
 このセクションでは、作成したスキルをテストする方法について説明します。 スキルをテストするには、カタログからスキルを追加して実行する必要があります。 このための手順は、以下のとおりです。</p>
 <ol>
 <li>
-<p>左上にあるメニュー (≣) をクリックし、<strong>チャット</strong>を選択して、チャット画面に移動します。
-<a class="glightbox" href="../image-76.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-76.png" /></a></p>
+<p>左上にあるメニュー (≣) をクリックし、<strong>チャット</strong>を選択して、チャット画面に移動します。<a class="glightbox" href="../image-76.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-76.png" /></a></p>
 </li>
 <li>
 <p><strong>Add skills from the catalog</strong> を選択し、前のステップで作成したスキルを選択します。<br />
