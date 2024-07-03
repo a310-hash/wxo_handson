@@ -401,7 +401,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      (オプション)openAPIで直接編集し、細かな変更を行う
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      作成したローン審査のスキルを使用してみよう！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       お疲れさまでした！
     </span>
@@ -412,7 +430,7 @@
         <li class="md-nav__item">
   <a href="#option" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 意思決定表の実装
+      さらに Option 意思決定表の実装
     </span>
   </a>
   
@@ -503,32 +521,32 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>このセクションでは、Automationを作成します。</p>
 <ol>
 <li>
-<p>Automationsをクリックします。もしくは、左上のメニューから<strong>Automations</strong>を選択してもOKです。<br />
-<a class="glightbox" href="../lab3_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image.png" /></a></p>
+<p>Skill studioをクリックします。もしくは、左上のメニューから<strong>Skill studio</strong>を選択してもOKです。<br />
+<a class="glightbox" href="../image-82.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-82.png" /></a></p>
 </li>
 <li>
-<p>右上の<strong>Create automation</strong>をクリックします。
-<a class="glightbox" href="../lab3_images/image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-1.png" /></a></p>
+<p>右上にある<strong>Create skill</strong>をクリックし、<strong>Automation</strong>をクリックします。
+<a class="glightbox" href="../image-83.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-83.png" /></a></p>
 </li>
 <li>
-<p>Automationの作成ダイアログが表示されるので、<strong>あなたのイニシャル_Lending_Services</strong>という名前を入力し、<strong>Create</strong>をクリックしてください。
-<a class="glightbox" href="../lab3_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-2.png" /></a></p>
+<p>Automationの新規作成のダイアログが表示されるので、<strong>あなたのイニシャル_Lending_Services</strong>という名前を入力し、<strong>Create</strong>をクリックしてください。
+<a class="glightbox" href="../image-84.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-84.png" /></a></p>
 </li>
 <li>
 <p>以下のようなダイアログが表示されます。意思決定、ワークフロー、生成AIに関する処理を実装することが可能です。今回は意思決定に関するスキルを実装するため、<strong>Decision</strong>をクリックします。  <br />
-<a class="glightbox" href="../lab3_images/image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-3.png" /></a></p>
+<a class="glightbox" href="../image-85.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-85.png" /></a></p>
 </li>
 <li>
 <p>次にDecisionのモデルを選択します。3つのモデルを選択可能ですが、今回はDecision Modelを作成します。Decision ModelはDMN(Decision Model Notation)と呼ばれる標準の形式で意思決定をモデル化することが可能です。<br />
-<a class="glightbox" href="../lab3_images/image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-4.png" /></a></p>
+<a class="glightbox" href="../image-86.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-86.png" /></a></p>
 </li>
 <li>
 <p>Decisionの名前を指定します。<strong>あなたのイニシャル Personal Loan</strong>という名前を指定して、<strong>Create</strong>ボタンをクリックしてください。<br />
-<a class="glightbox" href="../lab3_images/image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-5.png" /></a></p>
+<a class="glightbox" href="../image-87.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-87.png" /></a></p>
 </li>
 <li>
 <p>次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用されるデータを表現します。  青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。<br />
-<a class="glightbox" href="../lab3_images/image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-6.png" /></a></p>
+<a class="glightbox" href="../image-88.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-88.png" /></a></p>
 </li>
 </ol>
 <h2 id="input">Input ノードの実装</h2>
@@ -539,20 +557,24 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-7.png" /></a></p>
 </li>
 <li>
-<p>パレットからAdd Input Nodeをクリックし、新規にInputノードを追加します。<br />
-<a class="glightbox" href="../lab3_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-8.png" /></a>  </p>
+<p>Input Nodeの追加は2通りあります。</p>
+<ul>
+<li>①左側にあるパレットからAdd Input Nodeをクリックし、新規にInputノードを追加し、Decisionノードに接続する方法</li>
+<li>②Decisionノードにカーソルを持ってくると、decision nodeの上部にパレットが表示されるので、Inputノードをクリックし追加する方法
+<a class="glightbox" href="../lab3_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-8.png" /></a><br />
+<a class="glightbox" href="../image-89.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-89.png" /></a></li>
+</ul>
 </li>
 <li>
 <p>追加されたノードをクリックし、右側の編集欄から、Node nameを<strong>income</strong>に、Output typeを<strong>Integer</strong>にしてください。
 <a class="glightbox" href="../lab3_images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-9.png" /></a></p>
 </li>
-<li>
-<p>incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、<strong>Connect to another node</strong>をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)<br />
+</ol>
+<p>(左パレットでInputノードで追加した場合)
+incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、<strong>Connect to another node</strong>をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)<br />
 <a class="glightbox" href="../lab3_images/image-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-10.png" /></a>  </p>
-</li>
-<li>
-<p>1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  </p>
-</li>
+<ol>
+<li>1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  </li>
 </ol>
 <table>
 <thead>
@@ -588,7 +610,10 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>次に、意思決定ノードの中で実行されるルールをいくつか作成します。ルールは構文形式と意思決定表の形式で記述することが可能です。(日本語を用いることも可能ですが、現在のバージョンではサポートされていないため英語での記述になります。)</p>
 <ol>
 <li>
-<p>初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Logicタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。<br />
+<p>初めに作成するのは、<strong>デフォルト・ルール</strong>です。
+デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。
+その他のルールには<strong>ローンを却下する場合の条件</strong>を指定します。
+デフォルトのルールを作成するには、意思決定ノードを選択し、デフォルトではDetailsタブになっているため<strong>Logicタブ</strong>をクリックしてから右上に表示される＋ボタンをクリックし、一番下に表示されるDefault ruleを選択します。<br />
 <a class="glightbox" href="../lab3_images/image-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-12.png" /></a></p>
 </li>
 <li>
@@ -600,7 +625,8 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-14.png" /></a></p>
 </li>
 <li>
-<p>次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を<strong>decline low credit score</strong>として、Select the criteria for your ruleでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
+<p>次に、<strong>クレジット・スコアが600以下の申請者の申請はすべて却下するルール</strong>を追加します。Default ruleを選択したときと同様に右上にある+ボタンをクリックして、<strong>Business Rule</strong>を選択します。
+ルールの名前を<strong>decline low credit score</strong>として、Select the criteria for your ruleでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
 <a class="glightbox" href="../lab3_images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-17.png" /></a></p>
 </li>
 <li>
@@ -608,7 +634,10 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-18.png" /></a></p>
 </li>
 <li>
-<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。) <br />
+<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。
+手順は、右上にある+ボタンをクリックして、<strong>Business Rule</strong>を選択します。
+ルールの名前を<strong>decline unemployed</strong>として、Select the criteria for your ruleでcredit scoreを選択してから<strong>create</strong>をクリックしてください。
+(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。) <br />
 <a class="glightbox" href="../lab3_images/image-65.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-65.png" /></a></p>
 </li>
 </ol>
@@ -672,7 +701,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <a class="glightbox" href="../lab3_images/image-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-33.png" /></a></p>
 </li>
 <li>
-<p>意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから<strong>Skills and apps</strong>を選択してから、<strong>Skills</strong>タブをクリックし、スキルの一覧を表示させます。<br />
+<p>意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから<strong>Skills studio</strong>を選択してから、<strong>Skills</strong>タブをクリックし、スキルの一覧を表示させます。<br />
 <a class="glightbox" href="../lab3_images/image-34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-34.png" /></a></p>
 </li>
 <li>
@@ -681,7 +710,8 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 </li>
 </ol>
 <h2 id="_5">スキルのエンハンス</h2>
-<p>スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です、また、スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 </p>
+<p>スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です。
+また、オプションですが、スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 </p>
 <table>
 <thead>
 <tr>
@@ -729,6 +759,13 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>creditScoreを選択し説明に<strong>Provide the Experian credit score</strong>を入力してください。<br />
 <a class="glightbox" href="../lab3_images/image-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-40.png" /></a></p>
 </li>
+<li>
+<p><strong>Publish</strong>をクリックして変更を保存します。
+<a class="glightbox" href="../lab3_images/image-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-41.png" /></a></p>
+</li>
+</ol>
+<h2 id="openapi">(オプション)openAPIで直接編集し、細かな変更を行う</h2>
+<ol>
 <li>
 <p><strong>Save as draft</strong>をクリックして変更を保存します。<br />
 <a class="glightbox" href="../lab3_images/image-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-41.png" /></a></p>
@@ -783,6 +820,9 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>スキルの右側のメニューから<strong>Enhance this skill</strong>をクリックしてからスキルを<strong>Publish</strong>してください。<br />
 <a class="glightbox" href="../lab3_images/image-47.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-47.png" /></a></p>
 </li>
+</ol>
+<h2 id="_6">作成したローン審査のスキルを使用してみよう！</h2>
+<ol>
 <li>
 <p>左側のメニューから<strong>Skill catalog</strong>を選択します。<br />
 <a class="glightbox" href="../lab3_images/image-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-48.png" /></a></p>
@@ -800,9 +840,9 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 <p>値を入力し、正しい結果が返ってくることを確認してください。</p>
 </li>
 </ol>
-<h2 id="_6">お疲れさまでした！</h2>
+<h2 id="_7">お疲れさまでした！</h2>
 <p>このハンズオンでは、Automation Builderを用いて意思決定サービスを実装し、スキルの入力フォームをカスタマイズしてから、チャット画面から呼び出しました。意思決定サービスを用いることで、AIが苦手な根拠のある正確な判断を実行することができます。　</p>
-<h2 id="option">Option　意思決定表の実装</h2>
+<h2 id="option">さらに Option　意思決定表の実装</h2>
 <p>ルールを記述する際には今回のハンズオンで実施したような構文形式のルールの他に、意思決定表による実装も可能です。意思決定表はIf-Thenの組み合わせを表形式で表現するため、多数の条件を表形式で管理したい場合などに有効です。また、エクセルの表などをコピー＆ペーストすることも可能なため、より業務ユーザーが管理しやすいというメリットもあります。このオプションでは、先ほど実装した意思決定に、意思決定表形式の新たなルールを追加します。</p>
 <ol>
 <li>
