@@ -428,9 +428,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      さらに Option 意思決定表の実装
+      さらに オプション 意思決定表の実装
     </span>
   </a>
   
@@ -613,7 +613,7 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 <p>初めに作成するのは、<strong>デフォルト・ルール</strong>です。
 デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。
 その他のルールには<strong>ローンを却下する場合の条件</strong>を指定します。
-デフォルトのルールを作成するには、意思決定ノードを選択し、デフォルトではDetailsタブになっているため<strong>Logicタブ</strong>をクリックしてから右上に表示される＋ボタンをクリックし、一番下に表示されるDefault ruleを選択します。<br />
+デフォルトのルールを作成するには、Decisionノードを選択し、デフォルトではDetailsタブになっているため<strong>Logicタブ</strong>をクリックしてから右上に表示される＋ボタンをクリックし、一番下に表示されるDefault ruleを選択します。<br />
 <a class="glightbox" href="../lab3_images/image-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-12.png" /></a></p>
 </li>
 <li>
@@ -636,8 +636,10 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 <li>
 <p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。
 手順は、右上にある+ボタンをクリックして、<strong>Business Rule</strong>を選択します。
-ルールの名前を<strong>decline unemployed</strong>として、Select the criteria for your ruleでcredit scoreを選択してから<strong>create</strong>をクリックしてください。
-(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。) <br />
+ルールの名前を<strong>decline unemployed</strong>として、Select the criteria for your ruleで<strong>employed</strong>にチェックをしてから<strong>create</strong>をクリックしてください。
+(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)<br />
+<a class="glightbox" href="../image-90.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-90.png" /></a>
+ルールのテンプレートを以下の様に修正します。なお、Ctrl+Space(Macの場合はControl+Space)でコード補完が可能です。
 <a class="glightbox" href="../lab3_images/image-65.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-65.png" /></a></p>
 </li>
 </ol>
@@ -646,15 +648,16 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 <ol>
 <li>
 <p>右上の<strong>Preview</strong>アイコンをクリックしてください。<br />
-<a class="glightbox" href="../lab3_images/image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-21.png" /></a></p>
+<a class="glightbox" href="../image-91.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-91.png" /></a></p>
 </li>
 <li>
 <p><strong>Add test data set</strong>をクリックしてテスト・データを追加します。<br />
-<a class="glightbox" href="../lab3_images/image-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-22.png" /></a></p>
+<a class="glightbox" href="../image-92.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-92.png" /></a></p>
 </li>
 <li>
-<p>左側に各項目の入力画面が表示されるので、＋をクリックして入力してから<strong>pewview</strong>ボタンをクリックして意思決定の出力を確認してください。例えば、creditScoreに500を入力して実行した場合、却下されるはずです。<br />
-<a class="glightbox" href="../lab3_images/image-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-23.png" /></a></p>
+<p>左側に各項目の入力画面が表示されるので、＋をクリックして入力してから<strong>pewview</strong>ボタンをクリックして意思決定の出力を確認してください。
+ 例えば、creditScoreに500を入力して実行した場合、却下されるはずです。<br />
+<a class="glightbox" href="../image-93.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-93.png" /></a></p>
 </li>
 </ol>
 <h2 id="_4">意思決定サービスのデプロイ</h2>
@@ -662,7 +665,7 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 <ol>
 <li>
 <p>Back to "XX Personal Loan"をクリックしてください。<br />
-<a class="glightbox" href="../lab3_images/image-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-24.png" /></a></p>
+<a class="glightbox" href="../image-94.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-94.png" /></a></p>
 </li>
 <li>
 <p><strong>Operations</strong>タブをクリックしてください。スキルとして呼び出されるオペレーションを定義します。<br />
@@ -674,18 +677,20 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 </li>
 <li>
 <p>オペレーションの設定画面が表示されるので、Operation nameを<strong>XXPersonalLoan</strong>、Componentとして XX Personal Loanを選択してから<strong>save</strong>をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。<br />
-<a class="glightbox" href="../lab3_images/image-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-27.png" /></a></p>
+<a class="glightbox" href="../image-95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-95.png" /></a></p>
 </li>
 <li>
 <p>次にページ右上にある<strong>Share changes</strong>タブをクリックします。<br />
-<a class="glightbox" href="../lab3_images/image-28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-28.png" /></a></p>
+<a class="glightbox" href="../image-96.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-96.png" /></a></p>
 </li>
 <li>
 <p><strong>Share</strong>ボタンをクリックしてください。ダイアログが表示されるので<strong>Share</strong>をクリックします。この操作により、リポジトリに変更が反映されます。<br />
-<a class="glightbox" href="../lab3_images/image-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-29.png" /></a></p>
+<a class="glightbox" href="../image-97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-97.png" /></a>
+ポップアップが表示され、もう一度<strong>Share</strong>をクリックします。
+<a class="glightbox" href="../image-98.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-98.png" /></a></p>
 </li>
 <li>
-<p>左上の←をクリックしてLending Serviceのレベルに戻り、<strong>History</strong>タブをクリックしてください。<br />
+<p>左上の<strong>Back to XX_Lending_Srevices</strong>をクリックしてLending Serviceのレベルに戻り、<strong>History</strong>タブをクリックしてください。<br />
 <a class="glightbox" href="../lab3_images/image-30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-30.png" /></a></p>
 </li>
 <li>
@@ -694,19 +699,21 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 </li>
 <li>
 <p>バージョンの名前としてnameの欄に<strong>1.0.0</strong>と入力し、<strong>Create</strong>をクリックしてください。   　　
-<a class="glightbox" href="../lab3_images/image-32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-32.png" /></a></p>
+<a class="glightbox" href="../image-99.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-99.png" /></a></p>
 </li>
 <li>
 <p>バージョンが作成されたら、<strong>Publish</strong>タブをクリックし、作成されたバージョンを展開し、<strong>Publish</strong>をクリックしてください。ダイアログが表示されるので<strong>Publish</strong>をクリックします。<br />
-<a class="glightbox" href="../lab3_images/image-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-33.png" /></a></p>
+<a class="glightbox" href="../image-100.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-100.png" /></a>
+ポップアップが表示され、もう一度<strong>Publish</strong>をクリックします。
+<a class="glightbox" href="../image-101.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-101.png" /></a></p>
 </li>
 <li>
 <p>意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから<strong>Skills studio</strong>を選択してから、<strong>Skills</strong>タブをクリックし、スキルの一覧を表示させます。<br />
-<a class="glightbox" href="../lab3_images/image-34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-34.png" /></a></p>
+<a class="glightbox" href="../image-102.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-102.png" /></a></p>
 </li>
 <li>
 <p>作成した意思決定のスキルがReady to Publishの状態で表示されているはずです。
-<a class="glightbox" href="../lab3_images/image-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-35.png" /></a></p>
+<a class="glightbox" href="../image-103.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-103.png" /></a></p>
 </li>
 </ol>
 <h2 id="_5">スキルのエンハンス</h2>
@@ -745,18 +752,21 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 <ol>
 <li>
 <p>スキルの右側のメニューを展開し、<strong>Enhance this skill</strong>を選択します。<br />
-<a class="glightbox" href="../lab3_images/image-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-36.png" /></a></p>
+<a class="glightbox" href="../image-104.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-104.png" /></a></p>
 </li>
 <li>
 <p><strong>Input</strong>タブをクリックし、incomeの<strong>Required</strong>にチェックを入れてください。<br />
-<a class="glightbox" href="../lab3_images/image-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-37.png" /></a></p>
+<a class="glightbox" href="../image-105.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-105.png" /></a></p>
 </li>
 <li>
-<p>loanPurposeの<strong>Options</strong>を選択し、<strong>medical emergency</strong>,<strong>consolidate debt</strong>,<strong>home improvement</strong>の3つのOptionを設定してください。<br />
-<a class="glightbox" href="../lab3_images/image-39.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-39.png" /></a></p>
+<p>loanPurposeの<strong>Edit reponse</strong>をクリックすると表示方法が３つ選べるようになります。ここでは、選択肢セットする表示方法にするために<strong>Options</strong>を選択します。Optionsの中にあるOption1に選択肢を3つ入力します。
+<a class="glightbox" href="../image-106.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-106.png" /></a>
+<strong>medical emergency</strong>,<strong>consolidate debt</strong>,<strong>home improvement</strong>の3つのOptionを設定してください。<br />
+<a class="glightbox" href="../image-107.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-107.png" /></a></p>
 </li>
 <li>
-<p>creditScoreを選択し説明に<strong>Provide the Experian credit score</strong>を入力してください。<br />
+<p>creditScoreを選択し、表示ラベルを設定します。デフォルトのままでは、creditScoreを表示されるところを、<strong>Provide the Experian credit score</strong>に変更します。
+そのためには、Provide the Label for input parameter creditScoreと書かれいてる箇所に<strong>Provide the Experian credit score</strong>を入力してください。<br />
 <a class="glightbox" href="../lab3_images/image-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-40.png" /></a></p>
 </li>
 <li>
@@ -828,13 +838,16 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 <a class="glightbox" href="../lab3_images/image-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-48.png" /></a></p>
 </li>
 <li>
-<p><strong>あなたのイニシャル_Lending_Service</strong>検索欄に記入して検索し選択し、<strong>Add</strong>をクリックしてスキルを追加します。
-<a class="glightbox" href="../lab3_images/image-49.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-49.png" /></a><br />
-<a class="glightbox" href="../lab3_images/image-50.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-50.png" /></a></p>
+<p><strong>Lending</strong>検索欄に記入して検索し選択し、<strong>Add</strong>をクリックしてスキルを追加します。
+<a class="glightbox" href="../image-109.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-109.png" /></a>
+<a class="glightbox" href="../image-108.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-108.png" /></a></p>
 </li>
 <li>
-<p>左側のメニューからChatを表示し、チャットの入力欄に、<strong>あなたのイニシャルPersonalLoan</strong>と入力してみてください。 スキルのフォームが表示され、先ほど行ったカスタマイズが正しく行われていることを確認します。 
-<a class="glightbox" href="../lab3_images/image-52.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-52.png" /></a></p>
+<p>左側のメニューからChatを表示し、チャットの入力欄に、<strong>あなたのイニシャルPersonalLoan</strong>と入力してみてください。 スキルのフォームが表示され、先ほど行った表示が正しく行われていることを確認します。 必須項目として設定をした<strong>income</strong>のみが表示されます。試しに、<strong>500</strong>を入力しておきましょう。
+<a class="glightbox" href="../image-110.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-110.png" /></a>
+<strong>show all fields</strong>をクリックすると、他の選択肢が表示されるようになります。
+選択肢を設定した<strong>loanPurpose</strong>や
+<a class="glightbox" href="../image-111.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-111.png" /></a></p>
 </li>
 <li>
 <p>値を入力し、正しい結果が返ってくることを確認してください。</p>
@@ -842,7 +855,7 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 </ol>
 <h2 id="_7">お疲れさまでした！</h2>
 <p>このハンズオンでは、Automation Builderを用いて意思決定サービスを実装し、スキルの入力フォームをカスタマイズしてから、チャット画面から呼び出しました。意思決定サービスを用いることで、AIが苦手な根拠のある正確な判断を実行することができます。　</p>
-<h2 id="option">さらに Option　意思決定表の実装</h2>
+<h2 id="_8">さらに オプション　意思決定表の実装</h2>
 <p>ルールを記述する際には今回のハンズオンで実施したような構文形式のルールの他に、意思決定表による実装も可能です。意思決定表はIf-Thenの組み合わせを表形式で表現するため、多数の条件を表形式で管理したい場合などに有効です。また、エクセルの表などをコピー＆ペーストすることも可能なため、より業務ユーザーが管理しやすいというメリットもあります。このオプションでは、先ほど実装した意思決定に、意思決定表形式の新たなルールを追加します。</p>
 <ol>
 <li>
